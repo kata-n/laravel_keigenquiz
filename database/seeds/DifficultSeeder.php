@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class UserstableSeeder extends Seeder
+class DifficultSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,24 +13,20 @@ class UserstableSeeder extends Seeder
      */
     public function run()
     {
-      $users = [
-          $user1 = [
-            'name' => 'admin',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('administrator'),
+      $difficultes = [
+          $difficult1 = [
+            'name' => 'ふつう',
             'created_at' => Carbon::now(),
             'updated_at' =>  Carbon::now(),
           ],
-          $user2 = [
-            'name' => 'kata',
-            'email' => 'kata.kawa813@gmail.com',
-            'password' => bcrypt('kata123'),
+          $difficult2 = [
+            'name' => 'チャレンジ',
             'created_at' => Carbon::now(),
             'updated_at' =>  Carbon::now(),
           ]
         ];
-        foreach ($users as $user) {
-        DB::table('users')->insert($user);
+        foreach ($difficultes as $difficult) {
+        DB::table('difficult')->insert($difficult);
         }
     }
 }
