@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <title>けいげんクイズ | @yield ('title','')</title>
   </head>
   <body>
@@ -30,7 +30,7 @@
       @yield('content')
     </div>
     <footer>
-      Copyright© <a href="{{ url('/login') }}">kata</a>
+      Copyright© <a href="{{ url('/login')}}">kata</a>
     </footer>
   </body>
 </html>

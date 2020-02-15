@@ -22,7 +22,7 @@
           <td>{{ $key+1 }}</td>
           <td>{{ $list->title }}</td>
           <td>
-            <a href="{{ url('admin/'.$list->truefalse_id.'/edit') }}" class="btn btn-edit">編集
+            <a href="{{ url('admin/'.$list->truefalse_id.'/edit') }}" class="btn btn-primary">編集
               <i class="fas fa-pencil-alt"></i>
             </a>
           </td>
