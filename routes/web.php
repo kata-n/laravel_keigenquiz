@@ -37,3 +37,5 @@ Route::get('/admin/{truefalse_id}/edit', 'Admin\ManagementCntroller@edit')->name
 Route::post('/admin/{truefalse_id}', 'Admin\ManagementCntroller@update');
 //クイズ削除
 Route::post('/admin/{truefalse_id}/delete', 'Admin\ManagementCntroller@destroy')->name('tf.delete');
+//ajax
+Route::get('/ajax/menu', 'Ajax\TruefalsesCntroller@getQuizAll');

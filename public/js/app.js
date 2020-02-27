@@ -1855,7 +1855,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['title', 'circle', 'uncircle', 'commentary']
+});
 
 /***/ }),
 
@@ -37965,57 +37968,52 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "offset-3 col-6" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("p", { staticClass: "badge badge-dark" }, [_vm._v("第 1 問")]),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("h4", { staticClass: "card-title" }, [
-            _vm._v("食料品を持ち帰ったときの税率はいくつ？")
-          ]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary btn-lg btn-block text-left",
-              attrs: { type: "button" }
-            },
-            [_vm._v("1. 8％")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary btn-lg btn-block text-left",
-              attrs: { type: "button" }
-            },
-            [_vm._v("2. 10％")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary btn-lg btn-block text-left",
-              attrs: { type: "button" }
-            },
-            [_vm._v("3. どちらも同じ")]
-          )
-        ])
+  return _c("div", { staticClass: "offset-3 col-6" }, [
+    _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("p", { staticClass: "badge badge-dark" }, [_vm._v("第 1 問")]),
+        _vm._v(
+          "\n            " + _vm._s(_vm.props.item.title) + "\n            "
+        ),
+        _c("br"),
+        _vm._v(" "),
+        _c("h4", { staticClass: "card-title" }, [
+          _vm._v("食料品を持ち帰ったときの税率はいくつ？")
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-lg btn-block text-left",
+            attrs: { type: "button" }
+          },
+          [_vm._v("1. 8％")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-lg btn-block text-left",
+            attrs: { type: "button" }
+          },
+          [_vm._v("2. 10％")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-lg btn-block text-left",
+            attrs: { type: "button" }
+          },
+          [_vm._v("3. どちらも同じ")]
+        )
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

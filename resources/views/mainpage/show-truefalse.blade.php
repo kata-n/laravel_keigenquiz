@@ -7,8 +7,7 @@
   <section class="top">
     <div class="top-main">
       <div>けいげんクイズ</div>
-      <truefalse-header id="truefalse-header"></truefalse-header>
-      <truefalse-contents id="truefalse-contents" class="row"></truefalse-contents>
+      <truefalse-contents id="truefalse-contents"></truefalse-contents>
     </div>
     <a class="navbar-brand" href="{{ url('/') }}">トップページへ戻る</a>
   </section>
