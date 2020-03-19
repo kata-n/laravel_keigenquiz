@@ -8,6 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import router from './router.js'
+import axios from 'axios'
+
+Vue.prototype.$http = axios;
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -21,8 +27,8 @@ window.Vue = require('vue');
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-Vue.component("truefalse-contents", require("./components/TruefalseContents.vue").default);
-//Vue.component("truefalse-contents", require("./components/TruefalseHeader.vue").default);
+//Vue.component("truefalse-contents", require("./components/TruefalseContents.vue").default);
+//Vue.component("toppage-contents", require("./components/Toppagecontents.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -31,6 +37,14 @@ Vue.component("truefalse-contents", require("./components/TruefalseContents.vue"
  */
 
 
-const quizContents = new Vue({
-  el: "#truefalse-contents"
-});
+//const quizContents = new Vue({
+//  el: "#truefalse-contents"
+//});
+//
+//  const toppageContents = new Vue({
+//    el: "#toppage-contents"
+//  });
+
+new Vue({
+  router: router, // routerにはrouter.jsファイルを設定します
+ }).$mount('#app')

@@ -7,9 +7,14 @@
   <section class="top">
     <div class="top-main">
       <div>けいげんクイズ</div>
+<!--
       <truefalse-contents id="truefalse-contents">
         <truefalse-contents />
       </truefalse-contents>
+-->
+      <div id="app">
+       <router-view />
+      </div>
     </div>
     <a class="navbar-brand" href="{{ url('/') }}">トップページへ戻る</a>
   </section>

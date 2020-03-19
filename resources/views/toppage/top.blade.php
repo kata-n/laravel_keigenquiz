@@ -11,8 +11,16 @@
   <p>メインコンテンツ</p>
   <section class="top">
     <div class="top-main">
-      <div>けいげんクイズ</div>
-      <div>あの出来事は8％・10%どっち?</div>
+<!--
+      <toppage-contents id="toppage-contents">
+        <toppage-contents />
+      </toppage-contents>
+-->
+
+  <div id="app">
+    <router-view />
+  </div>
+
       <a href="{{ url('/mainpage') }}">クイズに挑戦！</a>
     </div>
   </section>
