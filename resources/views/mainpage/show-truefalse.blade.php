@@ -7,11 +7,6 @@
   <section class="top">
     <div class="top-main">
       <div>けいげんクイズ</div>
-<!--
-      <truefalse-contents id="truefalse-contents">
-        <truefalse-contents />
-      </truefalse-contents>
--->
       <div id="app">
        <router-view />
       </div>

@@ -33,6 +33,7 @@ class ManagementCntroller extends Controller
       'title' => 'required|string|max:255',
       'circle' => 'required',
       'uncircle' => 'required',
+      'uncircle2' => 'required',
       'difficult_id' => 'required',
       'commentary' => 'required|string|max:500',
     ]);
@@ -44,7 +45,9 @@ class ManagementCntroller extends Controller
     $registtf->title = $request->title;
     $registtf->circle = $request->circle;
     $registtf->uncircle = $request->uncircle;
+    $registtf->uncircle2 = $request->uncircle2;
     $registtf->commentary = $request->commentary;
+    $registtf->correct_num = $request->correct_num;
 
     //画像ファイル名をランダムの文字列へ＆path変更
     $file = $request->file('image_name');

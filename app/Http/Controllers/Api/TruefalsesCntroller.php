@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Ajax;
+namespace App\Http\Controllers\Api;
 
 use App\Truefalse;
 use Illuminate\Http\Request;
@@ -12,10 +12,10 @@ class TruefalsesCntroller extends Controller
   /**
    *クイズテータを取得しjson形式で返す
    */
-  public function getQuizAll()
+  public function getQuiz()
   {
     $tf_quizes = DB::table('truefalse')
-      ->select('title', 'circle', 'uncircle', 'commentary')
+      ->select('title', 'circle', 'uncircle', 'uncircle2','commentary', 'correct_num')
       ->where([
           ['delete_flg', '=', 0]
       ])

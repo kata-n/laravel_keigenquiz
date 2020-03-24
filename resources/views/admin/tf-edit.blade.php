@@ -6,7 +6,7 @@
   <form method="post" action="{{ url('admin/'.$truefalse->truefalse_id) }}" enctype="multipart/form-data" class="form">
     @csrf
     <div class="form-heading">
-      <h1>クイズを編集する</h1>
+      <h2>クイズを編集する</h2>
       <div class="update-date">最終更新日：<time>{{ $truefalse->updated_at->format('Y/m/d') }}</time></div>
     </div>
     <div class="form-group">
@@ -30,12 +30,33 @@
       </span>
       @endif
       <!-- uncircle間違い -->
-      <input type="text" class="form-control{{ $errors->has('uncircle') ? ' is-invalid' : '' }}" name="uncircle" value="{{ old('uncircle', $truefalse->uncircle) }}" placeholder="正解答え">
+      <input type="text" class="form-control{{ $errors->has('uncircle') ? ' is-invalid' : '' }}" name="uncircle" value="{{ old('uncircle', $truefalse->uncircle) }}" placeholder="間違い">
       @if($errors->has('uncircle'))
       <span class="invalid-feedback" role="alert">
         {{ $errors->first('uncircle') }}
       </span>
       @endif
+      <!-- uncircle間違い２つ目 -->
+      <input type="text" class="form-control{{ $errors->has('uncircle2') ? ' is-invalid' : '' }} mt-2" name="uncircle2" value="{{ old('uncircle', $truefalse->uncircle2) }}" placeholder="２つ目の不正解を入力">
+      @if($errors->has('uncircle2'))
+      <span class="invalid-feedback" role="alert">
+        {{ $errors->first('uncircle2') }}
+      </span>
+      @endif
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label>正解を選択<span class="attention">必須</span></label>
+          <select class="form-control" id="correct_num" name="correct_num">
+            @foreach ($difficultes as $difficult)
+            <option value="{{ $difficult->difficult_id }}" {{ $difficult->difficult_id == old('difficult_id',$truefalse->correct_num) ? 'selected' : '' }}>
+              {{ $difficult->difficult_id }}
+            </option>
+            @endforeach
+          </select>
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <div class="row">

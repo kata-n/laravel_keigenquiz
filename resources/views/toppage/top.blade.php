@@ -11,17 +11,10 @@
   <p>メインコンテンツ</p>
   <section class="top">
     <div class="top-main">
-<!--
-      <toppage-contents id="toppage-contents">
-        <toppage-contents />
-      </toppage-contents>
--->
-
-  <div id="app">
-    <router-view />
-  </div>
-
-      <a href="{{ url('/mainpage') }}">クイズに挑戦！</a>
+      <div id="app">
+        <router-view />
+      </div>
+      <a href="{{ url('/mainpage') }}" class="btn btn-primary center-block">クイズに挑戦！</a>
     </div>
   </section>
 @endsection

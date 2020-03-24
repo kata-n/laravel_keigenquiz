@@ -4,7 +4,7 @@
 
 @section('header')
   @parent
-  <p>サイドバー（共通部分）に追加される個別の部分</p>
+  <p>サイドバー（共通部分です）</p>
 @endsection
 
 @section('content')
@@ -28,7 +28,7 @@
     <div class="form-group">
       <label>選択肢を入力<span class="attention">必須</span></label>
       <!-- circle正解 -->
-      <input type="text" class="form-control{{ $errors->has('circle') ? ' is-invalid' : '' }}" name="circle" value="{{ old('circle') }}" placeholder="正解を入力">
+      <input type="text" class="form-control{{ $errors->has('circle') ? ' is-invalid' : '' }}" name="circle" value="{{ old('circle') }}" placeholder="正解文を入力">
       @if($errors->has('circle'))
       <span class="invalid-feedback" role="alert">
         {{ $errors->first('circle') }}
@@ -41,6 +41,27 @@
         {{ $errors->first('uncircle') }}
       </span>
       @endif
+      <!-- uncircle間違い２つ目 -->
+      <input type="text" class="form-control{{ $errors->has('uncircle2') ? ' is-invalid' : '' }} mt-2" name="uncircle2" value="{{ old('uncircle２') }}" placeholder="２つ目の不正解を入力">
+      @if($errors->has('uncircle2'))
+      <span class="invalid-feedback" role="alert">
+        {{ $errors->first('uncircle2') }}
+      </span>
+      @endif
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label>正解を選択<span class="attention">必須</span></label>
+          <select class="form-control" id="correct_num" name="correct_num">
+            @foreach ($difficultes as $difficult)
+            <option value="{{ $difficult->difficult_id }}" {{ $difficult->difficult_id == old('correct_num') ? 'selected' : '' }}>
+              {{ $difficult->difficult_id }}
+            </option>
+            @endforeach
+          </select>
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <div class="row">
