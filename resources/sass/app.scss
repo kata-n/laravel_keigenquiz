@@ -6,3 +6,508 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// ==============================
+// 変数定義
+// ==============================
+//ベースカラー(70%)
+$base-color: #ffec5e;
+//メインカラー(20%)
+$main-color: #5effec;
+//サブカラー(必須ではない)
+$sub-color: #98989a;
+//アクセントカラー(10%)
+$accesnt-color: #f8fdfd;
+//メイン文字色
+$font-color-main: #1e4483;
+//ヘッダ文字色
+$header-color: #ff5e5e;
+
+//サイト幅
+$site-width: 980px;
+//ヘッダー高さ
+$header-height: 80px;
+
+//htmlタグに使用
+$font-size-html:62.5%;
+//bodyタグに使用
+$font-size-body:1.6em;
+//文字サイズ
+$font-size_10px: 1.0rem;
+$font-size_14px: 1.4rem;
+$font-size_16px: 1.6rem;
+$font-size_18px: 1.8rem;
+$font-size_24px: 2.4rem;
+$font-size_30px: 3.0rem;
+$font-size_38px: 3.8rem;
+//余白
+$space_s: 0.5rem; //htmlにfont-size-htmlを指定した時は5px
+$space_m: 1.0rem;
+$space_l: 1.5rem;
+$space_xl: 2.0rem;
+$space_2l: 2.5rem;
+$space_3l: 3.0rem;
+$space_4l: 4.0rem;
+$space_5l: 5.0rem;
+$space_section: 10vh;
+
+//マップ型変数
+$breakpoints: (
+  'sm': 'screen and (max-width: 476px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+// ==============================
+// mixin
+// ==============================
+//スマホ
+@mixin mq() {
+  @media #{map-get($breakpoints,sm)} {
+    @content;
+  }
+}
+//タブレット
+@mixin md() {
+  @media #{map-get($breakpoints,md)} {
+    @content;
+  }
+}
+//ベンダープレフィックス
+@mixin css3($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+// ==================================
+// base
+// ==================================
+html{
+  font-size: $font-size-html;
+}
+
+body {
+  font-size: $font-size-body;
+  color: $font-color-main;
+  background-color: $base-color;
+  line-height: 1.2;
+}
+
+body:before {
+  position: fixed;
+  top: -10px;
+  left: 0;
+  z-index: 100;
+  content: '';
+  width: 100%;
+  height: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+*,*::before, *::after{
+  box-sizing: border-box;
+}
+
+@mixin contents{
+  max-width: $site-width;
+  height: 700px;
+  margin: 0 auto;
+  margin-top: $space_2l;
+}
+// ==============================
+// 共通
+// ==============================
+.heading{
+  letter-spacing: 3px;
+  font-size: $font-size_24px;
+  font-weight: 400;
+  &::after {
+    content: "";
+    display: block;
+    margin: -10px auto 0;
+    border-bottom: 20px solid #fff;
+    width: 40%;
+  }
+}
+
+.titleonly{
+    letter-spacing: 3px;
+  font-size: $font-size_24px;
+  font-weight: 400;
+}
+
+.rebtn{
+  margin-top: $space_l;
+}
+
+// ==============================
+// ヘッダー
+// ==============================
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  background-color: $accesnt-color;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
+  z-index: 2;
+  &__logo{
+  margin: $space_l;
+  padding-top: $space_m;
+  font-size: $font-size_24px;
+  letter-spacing: 2px;
+  }
+  &__logo a {
+    color: $font-color-main;
+  }
+}
+
+.nav{
+ &__list{
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+  }
+ &__list li {
+  display: inline-block;
+  }
+ &__list a {
+  display: block;
+  text-decoration: none;
+  padding: 0 32px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  margin-top: 13px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  color: $header-color;
+  transition: all 0.5s;
+  position: relative;
+  }
+ &__list a:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: $header-color;
+ }
+  &__login a{
+  border: 1px solid #DC143C;
+  background-color: #fdfbf1;
+  color: #DC143C;
+  }
+}
+// ==============================
+// container
+// ==============================
+.contain{
+  padding-top: $header-height;
+  width: 100%;
+}
+
+// ==============================
+// first-view
+// ==============================
+.name {
+  font-weight: bold;
+}
+.center {
+  text-align: center;
+}
+.fst__view,
+.about__view {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  height: 58vh;
+  display: flex;
+}
+.fst__view-cntent {
+  width: 50%;
+  margin-top: 4rem;
+}
+.fst__view-img {
+  width: 50%;
+  padding: 2em 3em 3em 7em;
+}
+.fst__view-img img,
+.about__img img {
+  height: 50vh;
+}
+.fst{
+  &__sentence {
+  padding: 1.2em;
+  background-color: #fff;
+  color: #1e4483;
+  letter-spacing: 4px;
+  font-size: 1.6em;
+  margin-bottom: 1.5em;
+  }
+  &__message{
+    display: block;
+    width: 55%;
+    padding: 1.2em;
+    background-color: #fff;
+    color: #1e4483;
+    letter-spacing: 4px;
+    font-size: 1.6em;
+    margin:auto 0 1.3em auto;
+  }
+}
+
+.quiz__startbtn {
+  display: block;
+  margin: 0 auto;
+  background-color: #fc3535;
+  color: #fff;
+  padding: 1.4em 1em;
+  margin-top: 0.5em;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 40%;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+.quiz__startbtn:hover {
+  background-color: #ff5e5e;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.4s;
+}
+// ==============================
+// about
+// ==============================
+.about{
+  margin-top: $space_section;
+  text-align: center;
+  &__img{
+    width: 35%;
+    padding-left: $space_3l;
+  }
+  &__content{
+    width: 65%;
+  }
+  &__content p{
+    line-height: 5vh;
+    text-align: center;
+  }
+  &__sentence{
+    padding: $space_5l $space_4l $space_l $space_l;
+    letter-spacing: 2px;
+    font-size: $font-size_18px;
+    line-height: 15vh;
+    font-weight: 500;
+  }
+}
+// ==============================
+// howkeigen
+// ==============================
+.howkeigen {
+  width: 75%;
+  margin: 0 auto;
+  height: 100vh;
+  &__content{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $space_l;
+  }
+  &__column{
+  width: 30%;
+  margin-bottom: 15px;
+  margin: 1.5rem;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: $space_l;
+    font-size: $font-size_18px;
+  }
+  &__comment{
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  &__img{
+    width: 80%;
+    margin: 0 auto 20px;
+    position: relative;
+    background: #fff;
+    border-radius: 500px;
+    overflow: hidden;
+  }
+  &__img img{
+    width: 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+    object-fit: contain;
+  }
+}
+
+// ==============================
+// book
+// ==============================
+.book{
+  width: 100%;
+  height: 91vh;
+  position: relative;
+  z-index: 0;
+  &::after{
+  content: '';
+  position: absolute;
+  left:0;
+  top: 0;
+  transform: skewY(-4deg);
+  transform-origin: bottom left;
+  z-index: -1;
+  width:100%;
+  height:100%;
+  background-color: #37deb8;
+  }
+  &__img{
+    width: 100%;
+    margin: 0 auto;
+    padding: $space_m;
+    text-align: center;
+  }
+  &__img img{
+    width: 80%;
+    object-fit: contain;
+    height: 250px;
+  }
+  &__title{
+    padding: $space_l;
+    letter-spacing: 1px;
+    background-color: #2d508b;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+  }
+  &__title p {
+    margin: 0;
+  }
+  &__comment{
+    padding: $space_m;
+    line-height: 2em;
+  }
+  &__container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__column{
+    width: 30%;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px #ccc;
+    margin: 1.5rem;
+  }
+}
+// ==============================
+// imformation
+// ==============================
+.imformation{
+  width: 100%;
+  height: 80vh;
+  &__container{
+    width: 70%;
+    margin: 0 auto;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 7px #ccc;
+  }
+  &__list{
+    padding: $space_l;
+  }
+}
+// ==============================
+// sitepolicy
+// ==============================
+.sitepolicy{
+  width: 100%;
+  height: 30vh;
+  padding-top: $space_2l;
+  }
+// ==============================
+// footer
+// ==============================
+.footer{
+  width: 100%;
+  height: 13vh;
+  background-color: #26477e;
+  &__content{
+    margin: 0 auto;
+    width: 80%;
+    padding: $space_2l;
+  }
+  &__siteabout{
+    color: #fff;
+  }
+  &__copyright{
+    color: #fff;
+    text-align: center;
+  }
+}
+// ==============================
+// quiz_area
+// ==============================
+.quiz{
+  width: 70%;
+  margin: 0 auto;
+  padding: $space_5l;
+  &__area{
+    width: 100%;
+  }
+}
+.card{
+  margin-bottom: $space_l;
+  &-title{
+    font-size: $font-size_18px;
+  }
+}
+.btn-block{
+  font-size: $font-size_16px;
+  width: 100%;
+  margin-bottom: $space_m;
+  padding: $space_m;
+  }
+.answer_btn,
+.next_btn,
+.result_btn{
+  display: inline-block;
+  max-width: 200px;
+  text-align: left;
+  letter-spacing: 2px;
+  background-color: #ffa300;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  border-bottom: 4px solid #d37800;
+}
+.answer_btn:hover{
+  transform: translateY(4px);
+  border-bottom: none;
+}
+.modeal_inner{
+  border-radius: 30px;
+  margin: 12% $space_section $space_section $space_section;
+  background-color: #fff;
+  padding: $space_3l;
+}
+.totop{
+  position: fixed;
+  right: 0;
+  bottom:0;
+  height: 3rem;
+  line-height: 3rem;
+  color: white;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  transition: all .3s ease;
+  background: #292828;
+}
