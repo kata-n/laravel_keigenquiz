@@ -5,15 +5,12 @@
       <p v-if="score > 0">3問中{{score}}問正解しました！</p>
       <p v-else>全問不正解です。。もう１度挑戦してみましょう！</p>
       <div class="container">
-        <div class="row">
-          <div class="col-md-5 offset-md-1">
-            <button @click="start" type="button" class="btn btn-default">リトライ</button>
-          </div>
-          <div class="col-md-5">
-            <button @click="tweet" type="button" class="btn btn-default">
-              <i class="fab fa-twitter fa-lg mr-3"></i>ツイート
-            </button>
-          </div>
+        <div>
+          <button @click="start" type="button" class="btn btn-default">リトライ</button>
+
+          <button @click="tweet" type="button" class="btn btn-default">
+            <i class="fab fa-twitter fa-lg mr-3"></i>ツイート
+          </button>
         </div>
       </div>
     </section>

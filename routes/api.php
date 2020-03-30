@@ -20,5 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => ['api']], function () {
   Route::get('mainpage', 'Api\TruefalsesCntroller@getQuiz');
   Route::get('difficult', 'Api\DifficultController@index');
+  Route::get('information', 'Api\InformationController@index');
 });
 

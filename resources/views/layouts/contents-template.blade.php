@@ -11,10 +11,11 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>けいげんクイズ | @yield ('title','')</title>
   </head>
-  <body>
-    <header>
+  <body id="top">
+    <header class="header">
     @section('header')
     <!--ヘッダー（共通部分）-->
+      <div class="header__logo"><a href="/">けいげんクイズ</a></div>
     @show
     </header>
 
@@ -25,12 +26,19 @@
       </div>
     @endif
 
-    <div class="container">
+    <div class="contain">
       <!--コンテンツ（共通部分）-->
       @yield('content')
     </div>
-    <footer>
-      Copyright© <a href="{{ url('/login')}}">kata</a>
+    <footer class="footer" id="footer">
+     <div class="footer__content">
+      <div class="footer__siteabout">
+        ・このサイトについて
+      </div>
+      <div class="footer__copyright">
+        Copyright© <a href="{{ url('/login')}}">kata</a>
+      </div>
+     </div>
     </footer>
   </body>
 </html>

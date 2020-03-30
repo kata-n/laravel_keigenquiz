@@ -5,14 +5,17 @@
  */
 
 require('./bootstrap');
+require("./script");
 
 window.Vue = require('vue');
 
 import Vue from 'vue'
 import router from './router.js'
 import axios from 'axios'
+import VueScrollTo from "vue-scrollto";
 
 Vue.prototype.$http = axios;
+Vue.use(VueScrollTo)
 
 /**
  * The following block of code may be used to automatically register your
@@ -46,5 +49,5 @@ Vue.prototype.$http = axios;
 //  });
 
 new Vue({
-  router: router, // routerにはrouter.jsファイルを設定します
+  router: router,
  }).$mount('#app')

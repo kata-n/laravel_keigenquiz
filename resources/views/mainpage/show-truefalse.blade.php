@@ -3,14 +3,11 @@
 @section('title','クイズ画面')
 
 @section('content')
-  <p>クイズ画面</p>
   <section class="top">
     <div class="top-main">
-      <div>けいげんクイズ</div>
       <div id="app">
        <router-view />
       </div>
     </div>
-    <a class="navbar-brand" href="{{ url('/') }}">トップページへ戻る</a>
   </section>
 @endsection

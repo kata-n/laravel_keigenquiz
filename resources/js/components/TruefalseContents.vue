@@ -1,6 +1,6 @@
 <template>
-  <div class="offset-3 col-6">
-    <section>
+  <div class="quiz">
+    <section class="quiz__area">
       <div class="card">
         <div class="card-body">
           <p class="badge badge-dark">第 {{ quizNumber }} 問</p>
@@ -11,50 +11,71 @@
             @click="goAnswer(1)"
             :disabled="isAlreadyAnswered"
             type="button"
+            v-on:click="showModal=!showModal"
             class="btn btn-primary btn-lg btn-block text-left"
           >1. {{ circle }}</button>
           <button
             @click="goAnswer(2)"
             :disabled="isAlreadyAnswered"
             type="button"
+            v-on:click="showModal=!showModal"
             class="btn btn-primary btn-lg btn-block text-left"
           >2. {{ uncircle }}</button>
           <button
             @click="goAnswer(3)"
             :disabled="isAlreadyAnswered"
             type="button"
+            v-on:click="showModal=!showModal"
             class="btn btn-primary btn-lg btn-block text-left"
           >3. {{ uncircle2 }}</button>
         </div>
       </div>
     </section>
     <section>
-      <p>
-        <button v-show="isAlreadyAnswered" disabled class="quiz-correct-answer">{{ correctNo }}</button>
-      </p>
-      <button @click="goAnswer(0)" v-show="!isAlreadyAnswered">正解を表示する</button>
-      <div class="alert alert-info" v-show="isCorrect">
-        <strong>正解!</strong>
-      </div>
-      <div class="alert alert-danger" v-show="isMistake">
-        <strong>不正解!</strong>
-      </div>
-    </section>
-    <section>
-      <h2 class="quiz-commentary-h2" v-show="isAlreadyAnswered">
-        <img class="quiz-commentary__logo" src />解説
-      </h2>
-      <div class="quiz-commentary__text" v-show="isAlreadyAnswered">{{ commentary }}</div>
       <button
-        @click="goNextQuiz"
-        v-if="!isQuizFinish"
-        v-show="isAlreadyAnswered"
-        type="button"
-        class="btn btn-primary center-block"
-      >次の問題へ</button>
-      <button v-if="isQuizFinish" @click="showResult" type="button" class="center-block">結果を見る</button>
+        @click="goAnswer(0)"
+        v-show="!isAlreadyAnswered"
+        class="answer_btn"
+        v-on:click="showModal=!showModal"
+      >正解を表示する</button>
+      <transition name="modal">
+        <div class="modal" v-if="showModal">
+          <div class="modeal_inner">
+            <p>
+              <button
+                v-show="isAlreadyAnswered"
+                disabled
+                class="quiz-correct-answer"
+              >{{ correctNo }}</button>
+            </p>
+            <div class="alert alert-info" v-show="isCorrect">
+              <strong>正解!</strong>
+            </div>
+            <div class="alert alert-danger" v-show="isMistake">
+              <strong>不正解!</strong>
+            </div>
+            <h2 class="quiz-commentary-h2" v-show="isAlreadyAnswered">
+              <img class="quiz-commentary__logo" src />解説
+            </h2>
+            <div class="quiz-commentary__text" v-show="isAlreadyAnswered">{{ commentary }}</div>
+            <button
+              @click="goNextQuiz"
+              v-if="!isQuizFinish"
+              v-show="isAlreadyAnswered"
+              type="button"
+              class="center-block next_btn"
+            >次の問題へ</button>
+            <button
+              v-if="isQuizFinish"
+              @click="showResult"
+              type="button"
+              class="center-block result_btn"
+            >結果をみる！</button>
+            <result-truefalse ref="result" v-bind:score="score"></result-truefalse>
+          </div>
+        </div>
+      </transition>
     </section>
-    <result-truefalse ref="result" v-bind:score="score"></result-truefalse>
   </div>
 </template>
 <script>
@@ -82,7 +103,8 @@ export default {
       isQuizFinish: false, //クイズが終了したかどうか
       score: 0,
       quizNumber: 1,
-      categoryName: ""
+      categoryName: "",
+      showModal: false
     };
   },
   mounted() {
@@ -135,6 +157,7 @@ export default {
         this.isCorrect = false;
         this.isMistake = false;
         this.isAlreadyAnswered = false;
+        this.showModal = false;
       }
     },
     endQuiz() {
@@ -152,5 +175,14 @@ export default {
 <style scoped>
 .name {
   font-weight: bold;
+}
+.modal {
+  display: inline;
+}
+.modal-enter-active {
+  transition: opacity 0.5s;
+}
+.modal-enter {
+  opacity: 0;
 }
 </style>
