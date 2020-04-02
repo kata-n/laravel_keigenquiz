@@ -43,3 +43,8 @@ Route::get('/policy', function () {
 });
 //ajax
 Route::get('/ajax/menu', 'Ajax\TruefalsesCntroller@getQuizAll');
+
+//お問い合わせフォーム
+Route::get('contact', 'ContactController@index')->name('contact');
+Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
+Route::post('/contact/sent', 'ContactController@sent')->name('contact.sent');
