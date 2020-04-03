@@ -11408,6 +11408,14 @@ body:before {
   margin-top: 1.5rem;
 }
 
+.textarea {
+  border-right: 1px solid #abb2b7;
+  -webkit-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+  margin-top: 0.5rem;
+  display: block;
+}
+
 .header {
   display: -webkit-box;
   display: flex;
@@ -11833,7 +11841,8 @@ body:before {
 
 .answer_btn,
 .next_btn,
-.result_btn {
+.result_btn,
+.contact_btn {
   display: inline-block;
   max-width: 200px;
   text-align: left;
@@ -11939,6 +11948,26 @@ body:before {
 
 .sitepolicy__message {
   margin-bottom: 20vh;
+}
+
+.contact,
+.confirm {
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+}
+
+.contactform {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+}
+
+.text__confirm {
+  display: block;
+  width: 60%;
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 476px) {

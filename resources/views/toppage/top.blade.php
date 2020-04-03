@@ -11,7 +11,7 @@
       <span></span>
       <span></span>
     </div>
-  <nav class="header-nav js-toggle-sp-menu-target">
+  <nav class="header-nav js-toggle-sp-menu-target" id="js-classtaget">
     <ul>
       <li><a href="/mainpage">クイズに挑戦</a></li>
       <li><a href="#about-keigen" id="toAbout" class="js-toggle-sp-menu">軽減税率のフシギ</a></li>

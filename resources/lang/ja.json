@@ -6,5 +6,6 @@
   "Deleted": "削除しました",
   "Login": "ログイン",
   "E-Mail Address": "メールアドレス",
-  "Password": "パスワード"
+  "Password": "パスワード",
+  "validation.required": "必須入力項目です"
 }

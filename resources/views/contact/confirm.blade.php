@@ -4,42 +4,50 @@
 
 @section('content')
   <section class="confirm">
+      <h2 class="heading center">お問い合わせ内容の確認</h2>
     <div class="row">
-        <h1>お問い合わせ内容の確認</h1>
-    </div>
     <form method="POST" action="{{ route('contact.sent') }}">
         @csrf
-
-        <label>メールアドレス</label>
+      <div class="form-group">
+        <label>メールアドレス:</label>
+          <div class="text__confirm">
         {{ $inputs['email'] }}
+        </div>
         <input
             name="email"
             value="{{ $inputs['email'] }}"
             type="hidden">
-
-        <label>タイトル</label>
+      </div>
+      <div class="form-group">
+        <label>タイトル:</label>
+          <div class="text__confirm">
         {{ $inputs['subject'] }}
+        </div>
         <input
             name="subject"
             value="{{ $inputs['subject'] }}"
             type="hidden">
+      </div>
 
-
+      <div class="form-group">
         <label>お問い合わせ内容</label>
-
-         {!! nl2br(e($inputs['messagebody'])) !!}
+          <div class="text__confirm">
+           {!! nl2br(e($inputs['messagebody'])) !!}
+          </div>
         <input
             name="messagebody"
             value="{{ $inputs['messagebody'] }}"
             type="hidden">
 
-        <button type="submit" name="action" value="back">
+       </div>
+        <button type="submit" name="action" value="back" class="contact_btn">
             入力内容修正
         </button>
-        <button type="submit" name="action" value="submit">
+        <button type="submit" name="action" value="submit" class="contact_btn">
             送信する
         </button>
     </form>
+    </div>
   </section>
 @endsection
 
