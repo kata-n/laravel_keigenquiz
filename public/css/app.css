@@ -11933,21 +11933,21 @@ body:before {
   color: #fff;
 }
 
-.sitepolicy__container {
+.policy__container {
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   width: 70%;
   margin: 0 auto;
   height: auto;
 }
 
-.sitepolicy__container p {
+.policy__container p {
   line-height: 2;
   letter-spacing: 2px;
   color: #777777;
 }
 
-.sitepolicy__message {
-  margin-bottom: 20vh;
+.policy__message {
+  margin-bottom: 10vh;
 }
 
 .contact,

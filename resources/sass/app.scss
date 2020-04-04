@@ -616,7 +616,7 @@ body:before {
 // ==============================
 // site__policy
 // ==============================
-.sitepolicy{
+.policy{
   &__container{
     padding: $space_3l $space_l $space_l $space_l;
     width: 70%;
@@ -629,7 +629,7 @@ body:before {
     color: #777777;
   }
   &__message{
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
   }
 }
 // ==============================
