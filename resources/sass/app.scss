@@ -614,13 +614,14 @@ body:before {
 }
 
 // ==============================
-// site__policy
+// policy
 // ==============================
 .policy{
+  margin-top: 140px;
   &__container{
     padding: $space_3l $space_l $space_l $space_l;
     width: 70%;
-    margin: 0 auto;
+    margin: $space_2l auto 0;
     height: auto;
   }
   &__container p {

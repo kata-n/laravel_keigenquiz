@@ -37,6 +37,7 @@ class ContactSendmail extends Mailable
       return $this
       ->from('kata.programming@gmail.com')
       ->subject('自動送信メール')
+      ->bcc('kata.kawa813@gmail.com');
       ->view('contact.mail')
       ->with([
           'email' => $this->email,
