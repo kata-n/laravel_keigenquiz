@@ -11416,6 +11416,14 @@ body:before {
   display: block;
 }
 
+.name {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
 .header {
   display: -webkit-box;
   display: flex;
@@ -11542,37 +11550,18 @@ body:before {
   width: 100%;
 }
 
-.name {
-  font-weight: bold;
-}
-
-.center {
-  text-align: center;
-}
-
-.fst__view,
-.about__view {
+.fst__view {
   position: relative;
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
-  height: 58vh;
-  display: -webkit-box;
-  display: flex;
+  height: 100vh;
+  background: url(/images/firstveiw.jpeg?79a2e889c68ce8680738ca365ff21a0a) 0 0 no-repeat;
+  background-size: cover;
 }
 
-.fst__view-cntent {
+.fst__content {
   width: 50%;
-  margin-top: 4rem;
-}
-
-.fst__view-img {
-  width: 50%;
-  padding: 2em 3em 3em 7em;
-}
-
-.fst__view-img img,
-.about__img img {
-  height: 50vh;
+  margin-top: 5rem;
 }
 
 .fst__sentence {
@@ -11586,6 +11575,9 @@ body:before {
 
 .fst__message {
   display: block;
+  position: absolute;
+  top: 80vh;
+  right: 0;
   width: 55%;
   padding: 1.2em;
   background-color: #fff;
@@ -11618,22 +11610,26 @@ body:before {
 }
 
 .about {
-  margin-top: 10vh;
+  margin-top: 15vh;
   text-align: center;
 }
 
 .about__img {
-  width: 35%;
-  padding-left: 3rem;
+  width: 45%;
 }
 
 .about__content {
-  width: 65%;
+  margin-top: 4rem;
+  padding-top: 5rem;
+  width: 55%;
 }
 
 .about__content p {
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
   line-height: 5vh;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .about__sentence {
@@ -11644,14 +11640,24 @@ body:before {
   font-weight: 500;
 }
 
-.howkeigen {
-  width: 75%;
+.about__view {
+  position: relative;
+  width: 85%;
   margin: 0 auto;
   height: 100vh;
+  display: -webkit-box;
+  display: flex;
+}
+
+.howkeigen {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #e6e6e6;
 }
 
 .howkeigen__content {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   display: -webkit-box;
   display: flex;
@@ -11864,7 +11870,7 @@ body:before {
 
 .modeal_inner {
   border-radius: 30px;
-  margin: 11% 10vh 10vh 10vh;
+  margin: 11% 15vh 15vh 15vh;
   background-color: #fff;
   padding: 3rem;
 }
@@ -11934,7 +11940,7 @@ body:before {
 }
 
 .policy {
-  margin-top: 140px;
+  margin-top: 50px;
 }
 
 .policy__container {
@@ -11992,14 +11998,14 @@ body:before {
     width: 90%;
   }
 
-  .fst__view-cntent {
+  .fst__view-img {
+    display: none;
+  }
+
+  .fst__content {
     width: 100%;
     margin-top: 4rem;
     position: absolute;
-  }
-
-  .fst__view-img {
-    display: none;
   }
 
   .quiz {

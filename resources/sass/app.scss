@@ -49,7 +49,7 @@ $space_2l: 2.5rem;
 $space_3l: 3.0rem;
 $space_4l: 4.0rem;
 $space_5l: 5.0rem;
-$space_section: 10vh;
+$space_section: 15vh;
 
 //マップ型変数
 $breakpoints: (
@@ -145,6 +145,13 @@ body:before {
   transition: border-color 0.5s;
   margin-top: 0.5rem;
   display: block;
+}
+
+.name {
+  font-weight: bold;
+}
+.center {
+  text-align: center;
 }
 
 // ==============================
@@ -250,7 +257,7 @@ body:before {
 }
 
 // ==============================
-// container
+// contain
 // ==============================
 .contain{
   padding-top: $header-height;
@@ -260,33 +267,19 @@ body:before {
 // ==============================
 // first-view
 // ==============================
-.name {
-  font-weight: bold;
-}
-.center {
-  text-align: center;
-}
-.fst__view,
-.about__view {
-  position: relative;
-  width: 75%;
-  margin: 0 auto;
-  height: 58vh;
-  display: flex;
-}
-.fst__view-cntent {
-  width: 50%;
-  margin-top: 4rem;
-}
-.fst__view-img {
-  width: 50%;
-  padding: 2em 3em 3em 7em;
-}
-.fst__view-img img,
-.about__img img {
-  height: 50vh;
-}
 .fst{
+  &__view{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background: url('images/firstveiw.jpeg')0 0 no-repeat;
+  background-size: cover;
+  }
+  &__content{
+  width: 50%;
+  margin-top: $space_5l;
+  }
   &__sentence {
   padding: 1.2em;
   background-color: #fff;
@@ -297,6 +290,9 @@ body:before {
   }
   &__message{
     display: block;
+    position: absolute;
+    top: 80vh;
+    right: 0;
     width: 55%;
     padding: 1.2em;
     background-color: #fff;
@@ -333,15 +329,19 @@ body:before {
   margin-top: $space_section;
   text-align: center;
   &__img{
-    width: 35%;
-    padding-left: $space_3l;
+    width: 45%;
   }
   &__content{
-    width: 65%;
+    margin-top: $space_4l;
+    padding-top: $space_5l;
+    width: 55%;
   }
   &__content p{
+    font-size: $font-size_16px;
+    letter-spacing: 0.5px;
     line-height: 5vh;
     text-align: center;
+    margin-bottom: $space_2l;
   }
   &__sentence{
     padding: $space_5l $space_4l $space_l $space_l;
@@ -351,15 +351,23 @@ body:before {
     font-weight: 500;
   }
 }
+.about__view{
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+}
 // ==============================
 // howkeigen
 // ==============================
 .howkeigen {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   height: 100vh;
+  background-color: #e6e6e6;
   &__content{
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -617,7 +625,7 @@ body:before {
 // policy
 // ==============================
 .policy{
-  margin-top: 140px;
+  margin-top: 50px;
   &__container{
     padding: $space_3l $space_l $space_l $space_l;
     width: 70%;
@@ -678,14 +686,14 @@ body:before {
   .fst__view{
     display: block;
     width: 90%;
-    &-cntent {
-      width: 100%;
-      margin-top: 4rem;
-      position: absolute;
-    }
     &-img{
       display: none;
     }
+  }
+  .fst__content {
+    width: 100%;
+    margin-top: 4rem;
+    position: absolute;
   }
 
   .quiz{

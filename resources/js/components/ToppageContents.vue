@@ -1,12 +1,11 @@
 <template>
   <div>
     <div class="fst__view">
-      <div class="fst__view-cntent">
+      <div class="fst__content">
         <p class="fst__sentence">あの出来事は</p>
         <p class="fst__sentence">8％・・？？それとも10%・・？？</p>
       </div>
       <div class="fst__view-img">
-        <img src="/images/top_view.png" alt />
       </div>
     </div>
     <p class="fst__message center">軽減税率に関するクイズに挑戦してみよう</p>
@@ -24,6 +23,7 @@
         <p>この軽減税率制度の導入により、8％と10％の消費税率が混在するようになりました。</p>
         <p>取引の内容によって消費税率が変わる為、中には線引きが難しいものもあります。</p>
         <p>そんな内容にクイズ形式で答えて、軽減税率について学んでみてはいかがでしょうか。</p>
+        <p>クイズはランダムで5問出題されます！気軽に挑戦してみてください！</p>
       </div>
     </div>
     <div class="howkeigen">
@@ -158,7 +158,6 @@
       <a href="#top" v-scroll-to="'#top'" class="totop">TOP</a>
     </div>
     <div class="sitepolicy">
-      <!-- <router-link to="/mainpage" class="quiz__startbtn rebtn">クイズに挑戦する</router-link> -->
       <a href="/mainpage" class="quiz__startbtn">クイズに挑戦する</a>
     </div>
   </div>

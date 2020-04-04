@@ -2127,7 +2127,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ToppageContents",
   data: function data() {
@@ -38490,7 +38489,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "fst__view" }, [
-      _c("div", { staticClass: "fst__view-cntent" }, [
+      _c("div", { staticClass: "fst__content" }, [
         _c("p", { staticClass: "fst__sentence" }, [_vm._v("あの出来事は")]),
         _vm._v(" "),
         _c("p", { staticClass: "fst__sentence" }, [
@@ -38498,9 +38497,7 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "fst__view-img" }, [
-        _c("img", { attrs: { src: "/images/top_view.png", alt: "" } })
-      ])
+      _c("div", { staticClass: "fst__view-img" })
     ])
   },
   function() {
@@ -38548,6 +38545,12 @@ var staticRenderFns = [
         _c("p", [
           _vm._v(
             "そんな内容にクイズ形式で答えて、軽減税率について学んでみてはいかがでしょうか。"
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "クイズはランダムで5問出題されます！気軽に挑戦してみてください！"
           )
         ])
       ])
@@ -55005,6 +55008,7 @@ $(function () {
     $doc.animate({
       scrollTop: scrTop - 100
     }, 'slow', 'swing');
+    $('#js-sp-nav-menu').removeClass('active');
   });
   $('#toBook').click(function () {
     $doc = $('body');
@@ -55012,6 +55016,7 @@ $(function () {
     $doc.animate({
       scrollTop: scrTop - 100
     }, 'slow', 'swing');
+    $('#js-sp-nav-menu').removeClass('active');
   });
   $('#toImformation').click(function () {
     $doc = $('body');
@@ -55019,6 +55024,7 @@ $(function () {
     $doc.animate({
       scrollTop: scrTop - 100
     }, 'slow', 'swing');
+    $('#js-sp-nav-menu').removeClass('active');
   }); //フッターを最下部に固定
 
   var $ftr = $('#footer');
@@ -55037,7 +55043,6 @@ $(function () {
   $(window).outerWidth(function () {
     var x = $(window).outerWidth();
     var y = 767;
-    console.log(x);
 
     if (x <= y) {
       $('#js-classtaget').addClass('js-toggle-sp-menu-target');

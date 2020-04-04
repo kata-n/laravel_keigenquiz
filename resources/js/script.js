@@ -3,16 +3,19 @@ $(function() {
   $doc = $('body');
   var scrTop = $('#about-keigen').offset().top;
   $doc.animate({ scrollTop: scrTop -100 }, 'slow', 'swing');
+  $('#js-sp-nav-menu').removeClass('active');
  });
  $('#toBook').click(function(){
   $doc = $('body');
   var scrTop = $('#book').offset().top;
   $doc.animate({ scrollTop: scrTop -100 }, 'slow', 'swing');
+  $('#js-sp-nav-menu').removeClass('active');
  });
  $('#toImformation').click(function(){
   $doc = $('body');
   var scrTop = $('#imformation').offset().top;
   $doc.animate({ scrollTop: scrTop -100 }, 'slow', 'swing');
+  $('#js-sp-nav-menu').removeClass('active');
  });
   //フッターを最下部に固定
   var $ftr = $('#footer');
@@ -30,7 +33,6 @@ $(function() {
   $(window).outerWidth(function(){
       var x = $(window).outerWidth();
       var y = 767;
-    console.log(x);
       if (x <= y) {
           $('#js-classtaget').addClass('js-toggle-sp-menu-target');
       }else{
