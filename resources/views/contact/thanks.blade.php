@@ -5,7 +5,7 @@
 @section('content')
   <section class="thanks">
     <div class="row">
-        <h1>お問い合わせ送信完了</h1>
+        <h2 class="heading center">お問い合わせ送信完了</h2>
     </div>
     <div class="row">
         <p>お問い合わせありがとうございました。</p>

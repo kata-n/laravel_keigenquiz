@@ -11362,7 +11362,7 @@ html {
 
 body {
   font-size: 1.6em;
-  color: #1e4483;
+  color: #1b3d76;
   background-color: #ffec5e;
   line-height: 1.2;
 }
@@ -11445,7 +11445,7 @@ body:before {
 }
 
 .header__logo a {
-  color: #1e4483;
+  color: #1b3d76;
 }
 
 .header-nav {
@@ -11555,7 +11555,6 @@ body:before {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  background: url(/images/firstveiw.jpeg?79a2e889c68ce8680738ca365ff21a0a) 0 0 no-repeat;
   background-size: cover;
 }
 
@@ -11620,7 +11619,9 @@ body:before {
 
 .about__content {
   margin-top: 4rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   width: 55%;
 }
 
@@ -11628,7 +11629,6 @@ body:before {
   font-size: 1.6rem;
   letter-spacing: 0.5px;
   line-height: 5vh;
-  text-align: center;
   margin-bottom: 2.5rem;
 }
 
@@ -11652,17 +11652,18 @@ body:before {
 .howkeigen {
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
-  background-color: #e6e6e6;
+  height: 130vh;
+  padding-top: 4rem;
+  background-color: #fff791;
 }
 
 .howkeigen__content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .howkeigen__column {
@@ -11673,13 +11674,20 @@ body:before {
 
 .howkeigen__title {
   text-align: center;
-  margin-bottom: 1.5rem;
+  border-bottom: dashed 2px #1b3d76;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
   font-size: 1.8rem;
 }
 
 .howkeigen__comment {
   text-align: center;
+  padding: 1rem;
+}
+
+.howkeigen__comment p {
   letter-spacing: 2px;
+  line-height: 2;
 }
 
 .howkeigen__img {
@@ -11718,7 +11726,7 @@ body:before {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: #37deb8;
+  background-color: #6fdeff;
 }
 
 .book__img {
@@ -11791,13 +11799,13 @@ body:before {
 .sitepolicy {
   width: 100%;
   height: 30vh;
-  padding-top: 2.5rem;
+  padding-top: 9vh;
 }
 
 .footer {
   width: 100%;
   height: 13vh;
-  background-color: #26477e;
+  background-color: #969696;
 }
 
 .footer__content {
@@ -11879,8 +11887,8 @@ body:before {
   position: fixed;
   right: 0;
   bottom: 0;
-  height: 3rem;
-  line-height: 3rem;
+  height: 4rem;
+  line-height: 4rem;
   color: white;
   text-align: center;
   width: 100px;
@@ -11968,7 +11976,8 @@ body:before {
   height: auto;
 }
 
-.contactform {
+.contactform,
+.thanks {
   width: 80%;
   margin: 0 auto;
   padding: 4rem 2.5rem;
@@ -11977,7 +11986,7 @@ body:before {
 .text__confirm {
   display: block;
   width: 60%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 476px) {
@@ -11995,7 +12004,7 @@ body:before {
 
   .fst__view {
     display: block;
-    width: 90%;
+    width: 100%;
   }
 
   .fst__view-img {
@@ -12059,7 +12068,8 @@ body:before {
   }
 
   .about__content {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .about__sentence {
@@ -12069,7 +12079,7 @@ body:before {
   .howkeigen {
     width: 100%;
     height: auto;
-    margin-bottom: 5rem;
+    padding-bottom: 1.5rem;
   }
 
   .howkeigen__content {
@@ -12102,6 +12112,7 @@ body:before {
 
   .book {
     height: auto;
+    padding-top: 1.5rem;
   }
 
   .book__container {
@@ -12125,6 +12136,36 @@ body:before {
 
   .modeal_inner {
     margin: 16vh 1rem 1.5rem;
+  }
+
+  .policy {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15vh;
+  }
+
+  .policy__container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .confirm {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 0 3rem;
+  }
+
+  .confirmform {
+    width: 100%;
+    padding-top: 2.5rem;
+  }
+
+  .contactform {
+    width: 90%;
   }
 }
 

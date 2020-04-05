@@ -19,7 +19,7 @@ $sub-color: #98989a;
 //アクセントカラー(10%)
 $accesnt-color: #f8fdfd;
 //メイン文字色
-$font-color-main: #1e4483;
+$font-color-main: #1b3d76;
 //ヘッダ文字色
 $header-color: #ff5e5e;
 
@@ -273,7 +273,7 @@ body:before {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  background: url('images/firstveiw.jpeg')0 0 no-repeat;
+//  background: url('images/firstveiw.jpeg')0 0 no-repeat;
   background-size: cover;
   }
   &__content{
@@ -333,14 +333,15 @@ body:before {
   }
   &__content{
     margin-top: $space_4l;
-    padding-top: $space_5l;
+    padding-top: $space_3l;
+    padding-left: $space_l;
+    padding-right: $space_l;
     width: 55%;
   }
   &__content p{
     font-size: $font-size_16px;
     letter-spacing: 0.5px;
     line-height: 5vh;
-    text-align: center;
     margin-bottom: $space_2l;
   }
   &__sentence{
@@ -364,14 +365,15 @@ body:before {
 .howkeigen {
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
-  background-color: #e6e6e6;
+  height: 130vh;
+  padding-top: $space_4l;
+  background-color: #fff791;
   &__content{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: $space_l;
+  margin-top: $space_2l;
   }
   &__column{
   width: 30%;
@@ -380,12 +382,18 @@ body:before {
   }
   &__title{
     text-align: center;
-    margin-bottom: $space_l;
+    border-bottom: dashed 2px $font-color-main;
+    letter-spacing: 2px;
+    margin-bottom: $space_2l;
     font-size: $font-size_18px;
   }
   &__comment{
     text-align: center;
+    padding: $space_m;
+  }
+  &__comment p {
     letter-spacing: 2px;
+    line-height: 2;
   }
   &__img{
     width: 80%;
@@ -421,7 +429,7 @@ body:before {
   z-index: -1;
   width:100%;
   height:100%;
-  background-color: #37deb8;
+  background-color: #6fdeff;
   }
   &__img{
     width: 100%;
@@ -488,7 +496,7 @@ body:before {
 .sitepolicy{
   width: 100%;
   height: 30vh;
-  padding-top: $space_2l;
+  padding-top: 9vh;
   }
 // ==============================
 // footer
@@ -496,7 +504,7 @@ body:before {
 .footer{
   width: 100%;
   height: 13vh;
-  background-color: #26477e;
+  background-color: #969696;
   &__content{
     margin: 0 auto;
     width: 80%;
@@ -567,8 +575,8 @@ body:before {
   position: fixed;
   right: 0;
   bottom:0;
-  height: 3rem;
-  line-height: 3rem;
+  height: 4rem;
+  line-height: 4rem;
   color: white;
   text-align: center;
   width: 100px;
@@ -655,7 +663,8 @@ body:before {
 // ==============================
 // お問い合わせ
 // ==============================
-.contactform{
+.contactform,
+.thanks{
   width: 80%;
   margin: 0 auto;
   padding: $space_4l $space_2l;
@@ -663,7 +672,7 @@ body:before {
 .text__confirm{
   display: block;
   width: 60%;
-  margin-bottom: $space_2l;
+  margin-bottom: $space_3l;
 }
 
 // ==============================
@@ -685,7 +694,7 @@ body:before {
   }
   .fst__view{
     display: block;
-    width: 90%;
+    width: 100%;
     &-img{
       display: none;
     }
@@ -740,7 +749,8 @@ body:before {
     height: 40vh;
   }
   .about__content{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .about__sentence{
     padding: $space_s;
@@ -749,7 +759,7 @@ body:before {
   .howkeigen{
     width: 100%;
     height: auto;
-    margin-bottom: $space_5l;
+    padding-bottom: $space_l;
     &__content{
       display: block;
       margin-bottom: $space_3l;
@@ -777,6 +787,7 @@ body:before {
   }
   .book{
     height: auto;
+    padding-top: $space_l;
     &__container{
       display: block;
       padding-bottom: $space_4l;
@@ -795,5 +806,30 @@ body:before {
   }
   .modeal_inner{
     margin: 16vh $space_m $space_l
+  }
+
+  .policy{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15vh;
+    &__container{
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .contact{
+    width: 100%;
+  }
+  .confirm{
+    width: 90%;
+    margin: 0 auto;
+    padding: $space_3l 0 $space_3l;
+  }
+  .confirmform{
+    width: 100%;
+    padding-top: $space_2l;
+  }
+  .contactform,{
+    width: 90%;
   }
 }

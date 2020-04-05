@@ -6,12 +6,12 @@
   <section class="confirm">
       <h2 class="heading center">お問い合わせ内容の確認</h2>
     <div class="row">
-    <form method="POST" action="{{ route('contact.sent') }}">
+    <form method="POST" action="{{ route('contact.sent') }}" class="confirmform">
         @csrf
       <div class="form-group">
-        <label>メールアドレス:</label>
-          <div class="text__confirm">
-        {{ $inputs['email'] }}
+        <label>＜メールアドレス＞</label>
+        <div class="text__confirm">
+          {{ $inputs['email'] }}
         </div>
         <input
             name="email"
@@ -19,18 +19,18 @@
             type="hidden">
       </div>
       <div class="form-group">
-        <label>タイトル:</label>
-          <div class="text__confirm">
-        {{ $inputs['subject'] }}
+        <label>＜お問い合わせ項目＞</label>
+        <div class="text__confirm">
+          {{ $inputs['contactitem'] }}
         </div>
         <input
-            name="subject"
-            value="{{ $inputs['subject'] }}"
+            name="contactitem"
+            value="{{ $inputs['contactitem'] }}"
             type="hidden">
       </div>
 
       <div class="form-group">
-        <label>お問い合わせ内容</label>
+        <label>＜お問い合わせ内容＞</label>
           <div class="text__confirm">
            {!! nl2br(e($inputs['messagebody'])) !!}
           </div>

@@ -21,7 +21,7 @@ class ContactController extends Controller
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
         $request->validate([
           'email' => 'required|email',
-          'subject' => 'required|max:255',
+          'contactitem' => 'required',
           'messagebody' => 'required|string',
         ]);
 
@@ -38,7 +38,7 @@ class ContactController extends Controller
       //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
       $request->validate([
           'email' => 'required|email',
-          'subject' => 'required',
+          'contactitem' => 'required',
           'messagebody'  => 'required'
       ]);
 
