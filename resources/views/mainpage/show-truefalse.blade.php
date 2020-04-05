@@ -11,3 +11,14 @@
     </div>
   </section>
 @endsection
+
+@section('footer')
+   <div class="footer__content">
+    <div class="footer__siteabout">
+      <a href="{{ url('/policy')}}">このサイトについて</a>
+    </div>
+    <div class="footer__copyright">
+      Copyright© <a href="{{ url('/login')}}">kata</a>
+    </div>
+   </div>
+@endsection
