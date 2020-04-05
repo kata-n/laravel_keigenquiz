@@ -12075,6 +12075,10 @@ body:before {
     width: 100%;
   }
 
+  .quiz__startbtn__bottom {
+    width: 100%;
+  }
+
   .quiz__topbtn {
     width: 100%;
   }
