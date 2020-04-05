@@ -317,12 +317,28 @@ body:before {
   margin-top: 0.5em;
   text-align: center;
   letter-spacing: 3px;
+  width: 100%;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.quiz__topbtn {
+  display: block;
+  margin: 0 auto;
+  background-color: #fc3535;
+  color: #fff;
+  padding: 1.4em 1em;
+  margin-top: 0.5em;
+  text-align: center;
+  letter-spacing: 3px;
   width: 40%;
   font-size: 1.1em;
   text-decoration: none;
 }
+
 .quiz__startbtn:hover,
-.quiz__startbtn__bottom:hover{
+.quiz__startbtn__bottom:hover,
+.quiz__topbtn:hover{
   background-color: #ff5e5e;
   color: #fff;
   text-decoration: none;
@@ -741,6 +757,10 @@ body:before {
     }
   }
 
+  .quiz__topbtn{
+    width: 100%;
+  }
+
   .header-nav {
     display: block;
     position: fixed;
@@ -865,6 +885,8 @@ body:before {
   }
 }
 
+
+
 /* アニメーション中のスタイル */
 .resultfade-leave-active,
 .resultfade-enter-active {
@@ -878,3 +900,4 @@ body:before {
 .resultfade-enter-to {
   opacity: 1;
 }
+

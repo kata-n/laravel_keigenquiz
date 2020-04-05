@@ -12,7 +12,7 @@
               <button @click="tweet" class="btn__twitter">
                 <i class="fab fa-twitter fa-lg mr-3"></i>ツイート
               </button>
-              <a href="/" class="quiz__startbtn">トップページへ</a>
+              <a href="/" class="quiz__topbtn">トップページへ</a>
             </div>
           </div>
         </section>

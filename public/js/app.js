@@ -39161,7 +39161,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "quiz__startbtn", attrs: { href: "/" } },
+                        { staticClass: "quiz__topbtn", attrs: { href: "/" } },
                         [_vm._v("トップページへ")]
                       )
                     ])
