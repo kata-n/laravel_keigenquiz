@@ -2127,6 +2127,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ToppageContents",
   data: function data() {
@@ -38602,7 +38603,20 @@ var staticRenderFns = [
           _c("div", { staticClass: "howkeigen__comment" }, [
             _c("p", [
               _vm._v(
-                "\n            消費税が10％に増税されることにより約5兆円の税収増が見込まれています。\n            これらは、社会保障の充実・少子化対策、赤字国債発行の抑制に充てられるとされています。\n            消費税の使い道は、分かりやすく紹介されたページが内閣府で用意されています！\n          "
+                "\n            消費税が10％に増税されることにより約5兆円の税収増が見込まれています。\n            これらは、社会保障の充実・少子化対策、赤字国債発行の抑制に充てられるとされています。\n            消費税の使い道は、分かりやすく紹介されたページが内閣府で用意されています！"
+              ),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "https://www.gov-online.go.jp/cam/shouhizei/keigenzeiritsu/",
+                    target: "blank"
+                  }
+                },
+                [_vm._v("軽減税率制度のこと | 政府広報オンライン")]
               )
             ])
           ])
@@ -54676,13 +54690,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_scrollto__WEBPACK_IMPORTED_MO
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-//const quizContents = new Vue({
-//  el: "#truefalse-contents"
-//});
-//
-//  const toppageContents = new Vue({
-//    el: "#toppage-contents"
-//  });
 
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   router: _router_js__WEBPACK_IMPORTED_MODULE_1__["default"]

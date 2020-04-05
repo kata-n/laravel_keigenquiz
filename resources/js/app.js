@@ -39,15 +39,6 @@ Vue.use(VueScrollTo)
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-
-//const quizContents = new Vue({
-//  el: "#truefalse-contents"
-//});
-//
-//  const toppageContents = new Vue({
-//    el: "#toppage-contents"
-//  });
-
 new Vue({
   router: router,
  }).$mount('#app')
