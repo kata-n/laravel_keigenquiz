@@ -39553,9 +39553,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "sitepolicy" }, [
-      _c("a", { staticClass: "quiz__startbtn", attrs: { href: "/mainpage" } }, [
-        _vm._v("クイズに挑戦する")
-      ])
+      _c(
+        "a",
+        { staticClass: "quiz__startbtn__bottom", attrs: { href: "/mainpage" } },
+        [_vm._v("クイズに挑戦する")]
+      )
     ])
   }
 ]

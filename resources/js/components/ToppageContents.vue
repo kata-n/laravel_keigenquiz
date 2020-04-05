@@ -160,7 +160,7 @@
       <a href="#top" v-scroll-to="'#top'" class="totop">TOP</a>
     </div>
     <div class="sitepolicy">
-      <a href="/mainpage" class="quiz__startbtn">クイズに挑戦する</a>
+      <a href="/mainpage" class="quiz__startbtn__bottom">クイズに挑戦する</a>
     </div>
   </div>
 </template>

@@ -11555,12 +11555,14 @@ body:before {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
+  background: url(/images/firstveiw.jpg?c2de6e7d005eef9bc3bccf26e950da3d) no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
 }
 
 .fst__content {
   width: 50%;
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 .fst__sentence {
@@ -11587,6 +11589,11 @@ body:before {
 }
 
 .quiz__startbtn {
+  position: absolute;
+  top: 105vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
   margin: 0 auto;
   background-color: #fc3535;
@@ -11600,12 +11607,27 @@ body:before {
   text-decoration: none;
 }
 
-.quiz__startbtn:hover {
+.quiz__startbtn:hover,
+.quiz__startbtn__bottom:hover {
   background-color: #ff5e5e;
   color: #fff;
   text-decoration: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.quiz__startbtn__bottom {
+  display: block;
+  margin: 0 auto;
+  background-color: #fc3535;
+  color: #fff;
+  padding: 1.4em 1em;
+  margin-top: 0.5em;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 40%;
+  font-size: 1.1em;
+  text-decoration: none;
 }
 
 .about {
@@ -12025,7 +12047,7 @@ body:before {
 
   .fst__content {
     width: 100%;
-    margin-top: 4rem;
+    padding-top: 4rem;
     position: absolute;
   }
 

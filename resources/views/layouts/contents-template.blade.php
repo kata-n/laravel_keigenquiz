@@ -1,4 +1,3 @@
-<!--全ページ共通で表示するものはここに記述する-->
  <html>
   <head>
     <meta charset="utf-8">
@@ -15,12 +14,10 @@
   <body id="top">
     <header class="header">
     @section('header')
-    <!--ヘッダー（共通部分）-->
       <div class="header__logo"><a href="/">けいげんクイズ</a></div>
     @show
     </header>
 
-    <!--フラッシュメッセージ-->
     @if (session('flash_message'))
       <div class="alert alert-primary text-center" role="alert">
         {{ session('flash_message') }}
@@ -28,7 +25,6 @@
     @endif
 
     <div class="contain">
-      <!--コンテンツ（共通部分）-->
       @yield('content')
     </div>
     <footer class="footer" id="footer">
