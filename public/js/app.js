@@ -1936,23 +1936,34 @@ __webpack_require__.r(__webpack_exports__);
   props: ["score"],
   data: function data() {
     return {
-      show: false,
       showfade: false
     };
   },
   methods: {
     showResult: function showResult() {
-      this.show = !this.show;
       this.showfade = !this.showfade;
     },
     start: function start() {
       window.location.href = "/mainpage";
     },
     tweet: function tweet() {
-      if (this.score = 0) {
-        open("https://twitter.com/intent/tweet?text=%E5%85%A8%E5%95%8F%E4%B8%8D%E6%AD%A3%E8%A7%A3%E3%83%BB%E3%83%BB%E3%82%82%E3%81%86%E4%B8%80%E5%BA%A6%E6%8C%91%E6%88%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81%0a&url=https%3A%2F%2Fshikatana.com&hashtags=%E3%81%91%E3%81%84%E3%81%92%E3%82%93%E3%82%AF%E3%82%A4%E3%82%BA", "_blank");
-      } else {
-        open("https://twitter.com/intent/tweet?text=" + this.score + "%E5%95%8F%E6%AD%A3%E8%A7%A3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%0a&url=https%3A%2F%2Fshikatana.com&hashtags=%E3%81%91%E3%81%84%E3%81%92%E3%82%93%E3%82%AF%E3%82%A4%E3%82%BA", "_blank");
+      switch (this.score) {
+        case 0:
+          {
+            open("https://twitter.com/intent/tweet?text=%E5%85%A8%E5%95%8F%E4%B8%8D%E6%AD%A3%E8%A7%A3%E3%83%BB%E3%83%BB%E3%82%82%E3%81%86%E4%B8%80%E5%BA%A6%E6%8C%91%E6%88%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81%0a&url=https%3A%2F%2Fapplication-keigen-quiz.shikatana.com&hashtags=%E3%81%91%E3%81%84%E3%81%92%E3%82%93%E3%82%AF%E3%82%A4%E3%82%BA", "_blank");
+            break;
+          }
+
+        case 3:
+          {
+            open("https://twitter.com/intent/tweet?text=%E5%85%A8%E5%95%8F%E6%AD%A3%E8%A7%A3%E3%81%A7%E3%81%99%EF%BC%81%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%A6%E7%B5%8C%E6%8B%85%E5%BD%93%E8%80%85%E3%83%BB%E3%83%BB%EF%BC%9F%EF%BC%9F%0a&url=https%3A%2F%2Fapplication-keigen-quiz.shikatana.com&hashtags=%E3%81%91%E3%81%84%E3%81%92%E3%82%93%E3%82%AF%E3%82%A4%E3%82%BA", "_blank");
+            break;
+          }
+
+        default:
+          {
+            open("https://twitter.com/intent/tweet?text=" + this.score + "%E5%95%8F%E6%AD%A3%E8%A7%A3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%0a&url=https%3A%2F%2Fapplication-keigen-quiz.shikatana.com&hashtags=%E3%81%91%E3%81%84%E3%81%92%E3%82%93%E3%82%AF%E3%82%A4%E3%82%BA", "_blank");
+          }
       }
     }
   }
@@ -1969,23 +1980,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -39126,49 +39120,44 @@ var render = function() {
   return _c("transition", { attrs: { name: "resultfade" } }, [
     _vm.showfade
       ? _c("div", { staticClass: "modal" }, [
-          _vm.show
-            ? _c("article", { staticClass: "p-quiz__result" }, [
-                _c("section", { staticClass: "p-quiz__content" }, [
-                  _c("h2", { staticClass: "heading" }, [_vm._v("クイズ結果")]),
-                  _vm._v(" "),
-                  _vm.score > 0
-                    ? _c("p", [
-                        _vm._v("3問中" + _vm._s(_vm.score) + "問正解しました！")
-                      ])
-                    : _c("p", [
-                        _vm._v("全問不正解です。。もう１度挑戦してみましょう！")
-                      ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "container" }, [
-                    _c("div", [
-                      _c(
-                        "button",
-                        { staticClass: "btn__retry", on: { click: _vm.start } },
-                        [_vm._v("リトライ")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn__twitter",
-                          on: { click: _vm.tweet }
-                        },
-                        [
-                          _c("i", { staticClass: "fab fa-twitter fa-lg mr-3" }),
-                          _vm._v("ツイート\n            ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "quiz__topbtn", attrs: { href: "/" } },
-                        [_vm._v("トップページへ")]
-                      )
-                    ])
+          _c("article", { staticClass: "p-quiz__result" }, [
+            _c("section", { staticClass: "p-quiz__content" }, [
+              _c("h2", { staticClass: "heading" }, [_vm._v("クイズ結果")]),
+              _vm._v(" "),
+              _vm.score > 0
+                ? _c("p", [
+                    _vm._v("3問中" + _vm._s(_vm.score) + "問正解しました！")
                   ])
+                : _c("p", [
+                    _vm._v("残念・・全問不正解です。。もう１度挑戦してみよう！")
+                  ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c("div", [
+                  _c(
+                    "button",
+                    { staticClass: "btn__retry", on: { click: _vm.start } },
+                    [_vm._v("リトライ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    { staticClass: "btn__twitter", on: { click: _vm.tweet } },
+                    [
+                      _c("i", { staticClass: "fab fa-twitter fa-lg mr-3" }),
+                      _vm._v("ツイート\n            ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "quiz__topbtn", attrs: { href: "/" } },
+                    [_vm._v("トップページへ")]
+                  )
                 ])
               ])
-            : _vm._e()
+            ])
+          ])
         ])
       : _vm._e()
   ])
@@ -39446,41 +39435,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "book__container" }, [
         _c("div", { staticClass: "book__column" }, [
           _c("div", { staticClass: "book__img" }, [
-            _c(
-              "a",
-              {
-                attrs: {
-                  target: "_blank",
-                  href:
-                    "https://www.amazon.co.jp/gp/product/4539727052/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4539727052&linkCode=as2&tag=mikaaaandayo-22&linkId=fea2bf1f13ba35af29367ad6e11e7e08"
-                }
-              },
-              [
-                _c("img", {
-                  attrs: {
-                    border: "0",
-                    src:
-                      "//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4539727052&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mikaaaandayo-22"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c("img", {
-              staticStyle: {
-                border: "none !important",
-                margin: "0px !important",
-                display: "none"
-              },
-              attrs: {
-                src:
-                  "//ir-jp.amazon-adsystem.com/e/ir?t=mikaaaandayo-22&l=am2&o=9&a=4539727052",
-                width: "1",
-                height: "1",
-                border: "0",
-                alt: ""
-              }
-            })
+            _c("img", { attrs: { src: "/images/book1.jpg", alt: "" } })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "book__title" }, [
