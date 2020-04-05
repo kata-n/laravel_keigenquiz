@@ -17,7 +17,8 @@
       <div class="about__img">
         <img src="/images/top_view2.png" alt />
       </div>
-      <div class="about__content">
+      <div class="about__content" v-observe-visibility="visibilityChanged01"
+        v-bind:class='{active:isVisible01}'>
         <p class="about__sentence">2019年の10月1日から消費税が10％となった日本。</p>
         <p>しかし以前と変わらず、消費税が8％の商品やサービスも存在しています。</p>
         <p>この軽減税率制度の導入により、8％と10％の消費税率が混在するようになりました。</p>
@@ -170,7 +171,8 @@ export default {
     return {
       difficultes: [1],
       difficult: [],
-      information: []
+      information: [],
+      isVisible01: false,
     };
   },
   mounted() {
@@ -184,7 +186,10 @@ export default {
   methods: {
     goQuiz() {
       this.$router.push("/quiz?difficultes=" + this.difficultes);
-    }
+    },
+    visibilityChanged01(isVisible01, entry) {
+      this.isVisible01 = isVisible01
+    },
   }
 };
 </script>

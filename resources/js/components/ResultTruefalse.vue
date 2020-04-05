@@ -1,20 +1,24 @@
 <template>
-  <article class="p-quiz__result" v-if="show">
-    <section>
-      <h2 class="heading">クイズ結果</h2>
-      <p v-if="score > 0">3問中{{score}}問正解しました！</p>
-      <p v-else>全問不正解です。。もう１度挑戦してみましょう！</p>
-      <div class="container">
-        <div>
-          <button @click="start" class="btn__retry">リトライ</button>
-          <button @click="tweet" class="btn__twitter">
-            <i class="fab fa-twitter fa-lg mr-3"></i>ツイート
-          </button>
-          <a href="/" class="quiz__startbtn">トップページへ</a>
-        </div>
-      </div>
-    </section>
-  </article>
+  <transition name="resultfade">
+    <div class="modal" v-if="showfade">
+      <article class="p-quiz__result" v-if="show">
+        <section class="p-quiz__content">
+          <h2 class="heading">クイズ結果</h2>
+          <p v-if="score > 0">3問中{{score}}問正解しました！</p>
+          <p v-else>全問不正解です。。もう１度挑戦してみましょう！</p>
+          <div class="container">
+            <div>
+              <button @click="start" class="btn__retry">リトライ</button>
+              <button @click="tweet" class="btn__twitter">
+                <i class="fab fa-twitter fa-lg mr-3"></i>ツイート
+              </button>
+              <a href="/" class="quiz__startbtn">トップページへ</a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -23,12 +27,14 @@ export default {
   props: ["score"],
   data: function() {
     return {
-      show: false
+      show: false,
+      showfade: false
     };
   },
   methods: {
     showResult: function() {
       this.show = !this.show;
+      this.showfade = !this.showfade;
     },
     start: function() {
       window.location.href = "/mainpage";

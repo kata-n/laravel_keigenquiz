@@ -66,8 +66,9 @@
               class="center-block next_btn"
             >次の問題へ</button>
             <button
-              v-if="isQuizFinish"
               @click="showResult"
+              v-if="isQuizFinish"
+              v-on:click="showfade = !showfade"
               type="button"
               class="center-block result_btn"
             >結果をみる！</button>
@@ -104,14 +105,14 @@ export default {
       score: 0,
       quizNumber: 1,
       categoryName: "",
-      showModal: false
+      showModal: false,
+      showfade: false
     };
   },
   mounted() {
     this.$http.get(`/api/mainpage`).then(response => {
       this.quizData = response.data;
       this.findNextQuiz(0);
-      console.log(this.quizData);
     });
   },
   methods: {
@@ -166,7 +167,6 @@ export default {
       this.isAlreadyAnswered = true;
     },
     showResult() {
-      // this.$refs.modal.render();
       this.$refs.result.showResult();
     }
   }

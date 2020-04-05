@@ -6,16 +6,20 @@
 
 require('./bootstrap');
 require("./script");
+require('intersection-observer');
 
 window.Vue = require('vue');
 
 import Vue from 'vue'
 import router from './router.js'
 import axios from 'axios'
-import VueScrollTo from "vue-scrollto";
+import VueScrollTo from "vue-scrollto"
+import VueObserveVisibility from 'vue-observe-visibility'
 
 Vue.prototype.$http = axios;
 Vue.use(VueScrollTo)
+Vue.use(VueObserveVisibility)
+
 
 /**
  * The following block of code may be used to automatically register your

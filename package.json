@@ -29,6 +29,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "intersection-observer": "^0.7.0",
+        "vue-observe-visibility": "^0.4.6",
         "vue-scrollto": "^2.17.1"
     }
 }

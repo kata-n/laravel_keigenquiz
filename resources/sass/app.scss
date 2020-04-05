@@ -337,6 +337,7 @@ body:before {
     padding-left: $space_l;
     padding-right: $space_l;
     width: 55%;
+    opacity: 0;
   }
   &__content p{
     font-size: $font-size_16px;
@@ -359,6 +360,10 @@ body:before {
   height: 100vh;
   display: flex;
 }
+.active{
+    transition: 3s;
+    opacity: 1;
+  }
 // ==============================
 // howkeigen
 // ==============================
@@ -602,8 +607,12 @@ body:before {
   color: $header-color;
 }
 .p-quiz__result{
-  margin-top: $space_2l;
   text-align: center;
+}
+.p-quiz__content{
+  margin-top: 30vh;
+  background: #fff;
+  padding: $space_4l;
 }
 .btn__retry,
 .btn__twitter{
@@ -637,7 +646,7 @@ body:before {
   &__container{
     padding: $space_3l $space_l $space_l $space_l;
     width: 70%;
-    margin: $space_2l auto 0;
+    margin: $space_2l auto $space_2l;
     height: auto;
   }
   &__container p {
@@ -807,6 +816,9 @@ body:before {
   .modeal_inner{
     margin: 16vh $space_m $space_l
   }
+  .p-quiz__content{
+    margin-top: 20vh;
+  }
 
   .policy{
     width: 90%;
@@ -832,4 +844,18 @@ body:before {
   .contactform,{
     width: 90%;
   }
+}
+
+/* アニメーション中のスタイル */
+.resultfade-leave-active,
+.resultfade-enter-active {
+  transition: opacity 2s;
+}
+ 
+/* 表示アニメーション */
+.resultfade-enter {
+  opacity: 0;
+}
+.resultfade-enter-to {
+  opacity: 1;
 }

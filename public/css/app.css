@@ -11623,6 +11623,7 @@ body:before {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   width: 55%;
+  opacity: 0;
 }
 
 .about__content p {
@@ -11647,6 +11648,12 @@ body:before {
   height: 100vh;
   display: -webkit-box;
   display: flex;
+}
+
+.active {
+  -webkit-transition: 3s;
+  transition: 3s;
+  opacity: 1;
 }
 
 .howkeigen {
@@ -11916,8 +11923,13 @@ body:before {
 }
 
 .p-quiz__result {
-  margin-top: 2.5rem;
   text-align: center;
+}
+
+.p-quiz__content {
+  margin-top: 30vh;
+  background: #fff;
+  padding: 4rem;
 }
 
 .btn__retry,
@@ -11954,7 +11966,7 @@ body:before {
 .policy__container {
   padding: 3rem 1.5rem 1.5rem 1.5rem;
   width: 70%;
-  margin: 2.5rem auto 0;
+  margin: 2.5rem auto 2.5rem;
   height: auto;
 }
 
@@ -12138,6 +12150,10 @@ body:before {
     margin: 16vh 1rem 1.5rem;
   }
 
+  .p-quiz__content {
+    margin-top: 20vh;
+  }
+
   .policy {
     width: 90%;
     margin: 0 auto;
@@ -12167,5 +12183,23 @@ body:before {
   .contactform {
     width: 90%;
   }
+}
+
+/* アニメーション中のスタイル */
+
+.resultfade-leave-active,
+.resultfade-enter-active {
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+/* 表示アニメーション */
+
+.resultfade-enter {
+  opacity: 0;
+}
+
+.resultfade-enter-to {
+  opacity: 1;
 }
 
