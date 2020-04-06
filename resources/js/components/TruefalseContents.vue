@@ -38,6 +38,17 @@
         class="answer_btn"
         v-on:click="showModal=!showModal"
       >正解を表示する</button>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- けいげんクイズ画面広告 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-1723163929361068"
+          data-ad-slot="8131538943"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
       <transition name="modal">
         <div class="modal" v-if="showModal">
           <div class="modeal_inner">
