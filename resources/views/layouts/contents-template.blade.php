@@ -7,6 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <meta name="twitter:card" content="summary"/>
+    <meta property="og:url" content="https://application-keigen-quiz.shikatana.com/"/>
+    <meta property="og:title" content="けいげんクイズ"/>
+    <meta property="og:description" content="軽減税率のクイズに挑戦"/>
+    <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>けいげんクイズ | @yield ('title','')</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
