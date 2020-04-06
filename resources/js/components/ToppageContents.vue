@@ -85,7 +85,8 @@
       <div class="book__container">
         <div class="book__column">
           <div class="book__img">
-            <img src="/images/book1.jpg" alt />
+            <!-- <img src="/images/book1.jpg" alt /> -->
+            <a target="_blank"  href="https://www.amazon.co.jp/gp/product/4539727052/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4539727052&linkCode=as2&tag=mikaaaandayo-22&linkId=a271585685de1eaee395bb24b1cca3d6"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4539727052&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mikaaaandayo-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=mikaaaandayo-22&l=am2&o=9&a=4539727052" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
           </div>
           <div class="book__title">
             <p>消費税軽減税率インボイス対応マニュアル</p>
