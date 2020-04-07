@@ -11920,7 +11920,8 @@ body:before {
   max-width: 200px;
   text-align: left;
   letter-spacing: 2px;
-  background-color: #ffa300;
+  background-color: rgba(255, 180, 48, 0.96);
+  border-color: #ffa300;
   font-size: 16px;
   color: #FFF;
   text-decoration: none;
@@ -11929,7 +11930,14 @@ body:before {
   border-bottom: 4px solid #d37800;
 }
 
-.answer_btn:hover {
+.answer_btn {
+  margin-bottom: 1.5rem;
+}
+
+.answer_btn:hover,
+.next_btn:hover,
+.result_btn:hover,
+.contact_btn:hover {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
   border-bottom: none;
