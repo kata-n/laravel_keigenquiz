@@ -8,6 +8,7 @@
       <div id="app">
        <router-view />
       </div>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </div>
   </section>
 @endsection

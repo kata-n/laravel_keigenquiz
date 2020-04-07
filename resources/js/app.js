@@ -15,10 +15,12 @@ import router from './router.js'
 import axios from 'axios'
 import VueScrollTo from "vue-scrollto"
 import VueObserveVisibility from 'vue-observe-visibility'
+import VueAdsense from 'vue-adsense'
 
 Vue.prototype.$http = axios;
 Vue.use(VueScrollTo)
 Vue.use(VueObserveVisibility)
+Vue.component('adsense', VueAdsense)
 
 
 /**
