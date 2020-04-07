@@ -760,6 +760,8 @@ body:before {
   .fst__view{
     display: block;
     width: 100%;
+    background: url('images/firstveiw.jpg') no-repeat center center;
+    background-size: contain;
     &-img{
       display: none;
     }
