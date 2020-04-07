@@ -2130,6 +2130,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ToppageContents",
   data: function data() {
@@ -39633,7 +39635,8 @@ var staticRenderFns = [
             _c("img", {
               staticStyle: {
                 border: "none !important",
-                margin: "0px !important"
+                margin: "0px !important",
+                display: "none"
               },
               attrs: {
                 src:
@@ -39665,7 +39668,40 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "book__column" }, [
           _c("div", { staticClass: "book__img" }, [
-            _c("img", { attrs: { src: "/images/book2.jpg", alt: "" } })
+            _c(
+              "a",
+              {
+                attrs: {
+                  target: "_blank",
+                  href:
+                    "https://www.amazon.co.jp/gp/product/4433616486/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4433616486&linkCode=as2&tag=mikaaaandayo-22&linkId=56f45517045405a70ad6e1c28a1d764c"
+                }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    border: "0",
+                    src:
+                      "//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4433616486&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mikaaaandayo-22"
+                  }
+                })
+              ]
+            ),
+            _c("img", {
+              staticStyle: {
+                border: "none !important",
+                margin: "0px !important",
+                display: "none"
+              },
+              attrs: {
+                src:
+                  "//ir-jp.amazon-adsystem.com/e/ir?t=mikaaaandayo-22&l=am2&o=9&a=4433616486",
+                width: "1",
+                height: "1",
+                border: "0",
+                alt: ""
+              }
+            })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "book__title" }, [
@@ -39689,7 +39725,40 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "book__column" }, [
           _c("div", { staticClass: "book__img" }, [
-            _c("img", { attrs: { src: "/images/book3.jpg", alt: "" } })
+            _c(
+              "a",
+              {
+                attrs: {
+                  target: "_blank",
+                  href:
+                    "https://www.amazon.co.jp/gp/product/4822237753/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4822237753&linkCode=as2&tag=mikaaaandayo-22&linkId=77d911a8ddbe20532f0fe770730eac8a"
+                }
+              },
+              [
+                _c("img", {
+                  attrs: {
+                    border: "0",
+                    src:
+                      "//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4822237753&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mikaaaandayo-22"
+                  }
+                })
+              ]
+            ),
+            _c("img", {
+              staticStyle: {
+                border: "none !important",
+                margin: "0px !important",
+                display: "none"
+              },
+              attrs: {
+                src:
+                  "//ir-jp.amazon-adsystem.com/e/ir?t=mikaaaandayo-22&l=am2&o=9&a=4822237753",
+                width: "1",
+                height: "1",
+                border: "0",
+                alt: ""
+              }
+            })
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "book__title" }, [
