@@ -11555,7 +11555,7 @@ body:before {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  background: url(/images/firstveiw.jpg?8572f8c4506a044d737504c186ec6cc0) no-repeat center center;
+  background: url(/images/firstveiw.jpg?569741b758ee9e79a85828c2ab4a585b) no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -12076,6 +12076,8 @@ body:before {
   .fst__view {
     display: block;
     width: 100%;
+    background: url(/images/firstveiw.jpg?569741b758ee9e79a85828c2ab4a585b) no-repeat center center;
+    background-size: contain;
   }
 
   .fst__view-img {
