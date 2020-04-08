@@ -126,21 +126,18 @@ export default {
   methods: {
     goAnswer(selectAnswerNum) {
       if (selectAnswerNum === 0) {
-        // selectAnswerNumが0の場合は、click 「正解を表示する」ボタンのクリック alert-info、alert-dangerを非表示
         this.isCorrect = false;
         this.isMistake = false;
       } else if (selectAnswerNum === Number(this.correctNo)) {
-        // 正解を押した場合 alert-infoを表示し、alert-dangerを非表示にする そしてスコアを加算する
         this.isCorrect = true;
         this.isMistake = false;
         this.score += 1;
       } else {
-        // 不正解の場合 alert-infoを非表示し、alert-dangerを表示にする
         this.isMistake = true;
         this.isCorrect = false;
       }
       this.isAlreadyAnswered = true;
-      if (this.quizNumber >= 3) {
+      if (this.quizNumber >= 5) {
         this.endQuiz();
       }
     },
@@ -158,7 +155,7 @@ export default {
       this.correctNo = this.quizData[quizNumber].correct_num;
     },
     goNextQuiz() {
-      if (this.quizNumber >= 3) {
+      if (this.quizNumber >= 5) {
         this.endQuiz();
       } else {
         this.findNextQuiz(this.quizNumber);

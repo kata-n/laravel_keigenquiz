@@ -2309,23 +2309,20 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     goAnswer: function goAnswer(selectAnswerNum) {
       if (selectAnswerNum === 0) {
-        // selectAnswerNumが0の場合は、click 「正解を表示する」ボタンのクリック alert-info、alert-dangerを非表示
         this.isCorrect = false;
         this.isMistake = false;
       } else if (selectAnswerNum === Number(this.correctNo)) {
-        // 正解を押した場合 alert-infoを表示し、alert-dangerを非表示にする そしてスコアを加算する
         this.isCorrect = true;
         this.isMistake = false;
         this.score += 1;
       } else {
-        // 不正解の場合 alert-infoを非表示し、alert-dangerを表示にする
         this.isMistake = true;
         this.isCorrect = false;
       }
 
       this.isAlreadyAnswered = true;
 
-      if (this.quizNumber >= 3) {
+      if (this.quizNumber >= 5) {
         this.endQuiz();
       }
     },
@@ -2339,7 +2336,7 @@ __webpack_require__.r(__webpack_exports__);
       this.correctNo = this.quizData[quizNumber].correct_num;
     },
     goNextQuiz: function goNextQuiz() {
-      if (this.quizNumber >= 3) {
+      if (this.quizNumber >= 5) {
         this.endQuiz();
       } else {
         this.findNextQuiz(this.quizNumber);
@@ -39301,16 +39298,14 @@ var render = function() {
             _c("section", { staticClass: "p-quiz__content" }, [
               _c("h2", { staticClass: "heading" }, [_vm._v("クイズ結果")]),
               _vm._v(" "),
-              _vm.score > 0 && _vm.score < 3
+              _vm.score > 0 && _vm.score < 5
                 ? _c("p", [
-                    _vm._v("3問中" + _vm._s(_vm.score) + "問正解しました！")
+                    _vm._v("5問中" + _vm._s(_vm.score) + "問正解しました！")
                   ])
-                : (_vm.score = 3)
-                ? _c("p", [
-                    _vm._v("3問中" + _vm._s(_vm.score) + "問、全問正解です！")
-                  ])
+                : (_vm.score = 5)
+                ? _c("p", [_vm._v("おめでとうございます！全問正解です！")])
                 : _c("p", [
-                    _vm._v("残念・・全問不正解です。。もう１度挑戦してみよう！")
+                    _vm._v("全問不正解です・・もう１度挑戦してみよう！")
                   ]),
               _vm._v(" "),
               _c("div", { staticClass: "container" }, [

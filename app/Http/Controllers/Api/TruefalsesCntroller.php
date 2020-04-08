@@ -20,7 +20,7 @@ class TruefalsesCntroller extends Controller
           ['delete_flg', '=', 0]
       ])
       ->inRandomOrder()
-      ->take(3)
+      ->take(5)
       ->get();
     return json_encode($tf_quizes, JSON_UNESCAPED_UNICODE);
   }
