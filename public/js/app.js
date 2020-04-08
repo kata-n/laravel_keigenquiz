@@ -1931,6 +1931,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ResultTruefalse",
   props: ["score"],
@@ -39304,6 +39305,10 @@ var render = function() {
                 ? _c("p", [
                     _vm._v("3問中" + _vm._s(_vm.score) + "問正解しました！")
                   ])
+                : (_vm.score = 3)
+                ? _c("p", [
+                    _vm._v("3問中" + _vm._s(_vm.score) + "問、全問正解です！")
+                  ])
                 : _c("p", [
                     _vm._v("残念・・全問不正解です。。もう１度挑戦してみよう！")
                   ]),
@@ -39418,7 +39423,7 @@ var render = function() {
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "例えば、映画館で買ったポップコーンはロビーとスクリーン館内では税率が異なっています。"
+              "例えば、映画館で買ったポップコーンはロビーと館内では税率が異なっています。"
             )
           ]),
           _c("p"),
