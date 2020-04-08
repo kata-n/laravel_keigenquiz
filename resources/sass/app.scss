@@ -765,8 +765,8 @@ body:before {
   .fst__view{
     display: block;
     width: 100%;
-    background: url('images/firstveiw.jpg') no-repeat center center;
-    background-size: contain;
+    background: url('images/sp_firstveiw.png') no-repeat center center;
+    background-size: cover;
     &-img{
       display: none;
     }
