@@ -2132,6 +2132,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ToppageContents",
   data: function data() {
@@ -39417,7 +39418,13 @@ var render = function() {
           _vm._v(" "),
           _c("p", [
             _vm._v(
-              "そんな内容にクイズ形式で答えて、軽減税率について学んでみてはいかがでしょうか。"
+              "例えば、映画館で買ったポップコーンはロビーとスクリーン館内では税率が異なっています。"
+            )
+          ]),
+          _c("p"),
+          _c("p", [
+            _vm._v(
+              "そんな内容にクイズ形式で答えて、軽減税率について学んでみてはいかがでしょうか！"
             )
           ]),
           _vm._v(" "),
