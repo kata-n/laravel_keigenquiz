@@ -51,6 +51,8 @@ $space_4l: 4.0rem;
 $space_5l: 5.0rem;
 $space_section: 15vh;
 
+//外枠
+$modal_color: #d8d8d8;
 //マップ型変数
 $breakpoints: (
   'sm': 'screen and (max-width: 476px)',
@@ -631,6 +633,7 @@ body:before {
   margin: 11% $space_section $space_section $space_section;
   background-color: #fff;
   padding: $space_3l;
+  border: 1px solid $modal_color;
 }
 .totop{
   position: fixed;
@@ -669,6 +672,8 @@ body:before {
   margin-top: 30vh;
   background: #fff;
   padding: $space_4l;
+  border-bottom: 1px solid $modal_color;
+  border-top: 1px solid $modal_color;
 }
 .btn__retry,
 .btn__twitter{

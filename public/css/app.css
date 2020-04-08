@@ -11947,6 +11947,7 @@ body:before {
   margin: 11% 15vh 15vh 15vh;
   background-color: #fff;
   padding: 3rem;
+  border: 1px solid #d8d8d8;
 }
 
 .totop {
@@ -11989,6 +11990,8 @@ body:before {
   margin-top: 30vh;
   background: #fff;
   padding: 4rem;
+  border-bottom: 1px solid #d8d8d8;
+  border-top: 1px solid #d8d8d8;
 }
 
 .btn__retry,
