@@ -1955,7 +1955,7 @@ __webpack_require__.r(__webpack_exports__);
             break;
           }
 
-        case 3:
+        case 5:
           {
             open("https://twitter.com/intent/tweet?text=%E5%85%A8%E5%95%8F%E6%AD%A3%E8%A7%A3%E3%81%A7%E3%81%99%EF%BC%81%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%A6%E7%B5%8C%E6%8B%85%E5%BD%93%E8%80%85%E3%83%BB%E3%83%BB%EF%BC%9F%EF%BC%9F%0a&url=https%3A%2F%2Fapplication-keigen-quiz.shikatana.com&hashtags=%E3%81%91%E3%81%84%E3%81%92%E3%82%93%E3%82%AF%E3%82%A4%E3%82%BA", "_blank");
             break;
