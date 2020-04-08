@@ -39301,7 +39301,7 @@ var render = function() {
             _c("section", { staticClass: "p-quiz__content" }, [
               _c("h2", { staticClass: "heading" }, [_vm._v("クイズ結果")]),
               _vm._v(" "),
-              _vm.score > 0
+              _vm.score > 0 && _vm.score < 3
                 ? _c("p", [
                     _vm._v("3問中" + _vm._s(_vm.score) + "問正解しました！")
                   ])
