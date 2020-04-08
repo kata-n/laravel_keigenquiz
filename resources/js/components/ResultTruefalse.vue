@@ -4,7 +4,7 @@
       <article class="p-quiz__result">
         <section class="p-quiz__content">
           <h2 class="heading">クイズ結果</h2>
-          <p v-if="score > 0">3問中{{score}}問正解しました！</p>
+          <p v-if="score > 0 && score < 3">3問中{{score}}問正解しました！</p>
           <p v-else-if="score = 3">3問中{{score}}問、全問正解です！</p>
           <p v-else>残念・・全問不正解です。。もう１度挑戦してみよう！</p>
           <div class="container">
