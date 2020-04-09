@@ -815,7 +815,7 @@ body:before {
       display: block;
     }
   }
-  
+
   .about__view{
     width: 100%;
     display: block;
@@ -915,6 +915,13 @@ body:before {
   }
   .contactform,{
     width: 90%;
+  }
+}
+
+//タブレット
+@include md() {
+  .header{
+    display: block;
   }
 }
 

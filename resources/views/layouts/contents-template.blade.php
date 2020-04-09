@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="軽減税率に関する問題をクイズ形式で答えながら学べるサイトです。問題はランダムで５問出題されます。全問正解を目指してみよう" />
     <meta name="twitter:card" content="summary"/>
     <meta property="og:url" content="https://application-keigen-quiz.shikatana.com/"/>
     <meta property="og:title" content="けいげんクイズ"/>
