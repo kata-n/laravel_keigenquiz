@@ -11,7 +11,7 @@
     <meta name="twitter:card" content="summary"/>
     <meta property="og:url" content="https://application-keigen-quiz.shikatana.com/"/>
     <meta property="og:title" content="けいげんクイズ"/>
-    <meta property="og:description" content="軽減税率のクイズに挑戦"/>
+    <meta property="og:description" content="軽減税率に関するクイズに挑戦みよう"/>
     <meta property="og:image" content="{{ asset('images/top_view2.png') }}"/>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>けいげんクイズ | @yield ('title','')</title>
