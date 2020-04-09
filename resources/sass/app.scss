@@ -155,6 +155,10 @@ body:before {
 .center {
   text-align: center;
 }
+.active{
+    transition: 3s;
+    opacity: 1;
+  }
 
 // ==============================
 // ヘッダー
@@ -404,18 +408,15 @@ body:before {
     line-height: 15vh;
     font-weight: 500;
   }
-}
-.about__view{
-  position: relative;
-  width: 85%;
-  margin: 0 auto;
-  height: 100vh;
-  display: flex;
-}
-.active{
-    transition: 3s;
-    opacity: 1;
+  &__view{
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
   }
+}
+
 // ==============================
 // howkeigen
 // ==============================
@@ -788,10 +789,9 @@ body:before {
     &__startbtn__retry{
       width: 100%;
     }
-  }
-
-  .quiz__topbtn{
-    width: 100%;
+    &__topbtn{
+      width: 100%;
+    }
   }
 
   .header-nav {
@@ -917,8 +917,6 @@ body:before {
     width: 90%;
   }
 }
-
-
 
 /* アニメーション中のスタイル */
 .resultfade-leave-active,
