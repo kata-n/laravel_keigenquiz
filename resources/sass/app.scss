@@ -56,7 +56,7 @@ $modal_color: #d8d8d8;
 //マップ型変数
 $breakpoints: (
   'sm': 'screen and (max-width: 476px)',
-  'md': 'screen and (max-width: 767px)',
+  'md': 'screen and (max-width: 768px)',
   'lg': 'screen and (max-width: 1000px)',
   'xl': 'screen and (max-width: 1200px)',
 ) !default;
@@ -155,10 +155,7 @@ body:before {
 .center {
   text-align: center;
 }
-.active{
-    transition: 3s;
-    opacity: 1;
-  }
+
 
 // ==============================
 // ヘッダー
@@ -750,9 +747,6 @@ body:before {
 // smart phone
 // ==============================
 @include mq(){
-// ==============================
-// header
-// ==============================
   .header{
     display: block;
   }
@@ -923,9 +917,53 @@ body:before {
   .header{
     display: block;
   }
+  .header-nav {
+    display: block;
+    position: fixed;
+    top: 100vh;
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    opacity: 0;
+    transition: .5s;
+    & ul {
+      display: block;
+      padding: $space_m;
+    }
+    & ul li {
+      text-align: left;
+      padding: 2.5rem 0;
+      list-style: none;
+      display: block;
+    }
+  }
+  .menu-trigger {
+    display: inline-block;
+  }
+  .howkeigen{
+    height: 100vh;
+    &__content{
+      flex-wrap: nowrap;
+    }
+  }
+  .book{
+    height: 70vh;
+    &__container{
+      flex-wrap: nowrap;
+    }
+  }
+  .imformation{
+    height: 40vh;
+    &__container{
+      height: 40vh;
+    }
+  }
 }
 
-/* アニメーション中のスタイル */
+// ==============================
+// /* アニメーション中のスタイル */
+// ==============================
 .resultfade-leave-active,
 .resultfade-enter-active {
   transition: opacity 2s;
@@ -938,4 +976,7 @@ body:before {
 .resultfade-enter-to {
   opacity: 1;
 }
-
+.active{
+    transition: 3s;
+    opacity: 1;
+  }

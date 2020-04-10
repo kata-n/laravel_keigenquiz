@@ -11702,12 +11702,6 @@ body:before {
   display: flex;
 }
 
-.active {
-  -webkit-transition: 3s;
-  transition: 3s;
-  opacity: 1;
-}
-
 .howkeigen {
   width: 100%;
   margin: 0 auto;
@@ -12259,7 +12253,64 @@ body:before {
   }
 }
 
-/* アニメーション中のスタイル */
+@media screen and (max-width: 768px) {
+  .header {
+    display: block;
+  }
+
+  .header-nav {
+    display: block;
+    position: fixed;
+    top: 100vh;
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .header-nav ul {
+    display: block;
+    padding: 1rem;
+  }
+
+  .header-nav ul li {
+    text-align: left;
+    padding: 2.5rem 0;
+    list-style: none;
+    display: block;
+  }
+
+  .menu-trigger {
+    display: inline-block;
+  }
+
+  .howkeigen {
+    height: 100vh;
+  }
+
+  .howkeigen__content {
+    flex-wrap: nowrap;
+  }
+
+  .book {
+    height: 70vh;
+  }
+
+  .book__container {
+    flex-wrap: nowrap;
+  }
+
+  .imformation {
+    height: 40vh;
+  }
+
+  .imformation__container {
+    height: 40vh;
+  }
+}
 
 .resultfade-leave-active,
 .resultfade-enter-active {
@@ -12274,6 +12325,12 @@ body:before {
 }
 
 .resultfade-enter-to {
+  opacity: 1;
+}
+
+.active {
+  -webkit-transition: 3s;
+  transition: 3s;
   opacity: 1;
 }
 

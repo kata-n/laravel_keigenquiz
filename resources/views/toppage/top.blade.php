@@ -4,7 +4,6 @@
 
 @section('header')
   @parent
-  <!--ヘッダー（共通部分）に追加される個別の部分-->
   <nav class="nav">
     <div class="menu-trigger js-toggle-sp-menu" id="js-sp-nav-menu">
       <span></span>
