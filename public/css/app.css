@@ -12287,16 +12287,8 @@ body:before {
     display: inline-block;
   }
 
-  .howkeigen {
-    height: 100vh;
-  }
-
   .howkeigen__content {
     flex-wrap: nowrap;
-  }
-
-  .book {
-    height: 70vh;
   }
 
   .book__container {
