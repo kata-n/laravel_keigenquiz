@@ -1,5 +1,5 @@
 ## けいげんクイズ
-https://user-images.githubusercontent.com/56011845/80297534-d24cb580-87be-11ea-918c-e9e848c346a4.PNG
+![top](https://user-images.githubusercontent.com/56011845/80297534-d24cb580-87be-11ea-918c-e9e848c346a4.PNG)
 
 ## Learning Laravel
 
